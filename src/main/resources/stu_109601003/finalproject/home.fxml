@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import javafx.collections.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<VBox fx:id="main_page" alignment="TOP_CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onKeyPressed="#handle" prefHeight="675.0" prefWidth="1200.0" spacing="10.0" style="-fx-background-color: #f4f1ec;" xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="stu_109601003.finalproject.HomeController">
+    <children>
+        <Label fx:id="title" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="50.0" prefWidth="194.0" text="濕伯伯動起來!!!">
+            <font>
+                <Font size="28.0" />
+            </font>
+        </Label>
+        <HBox alignment="CENTER" prefHeight="80.0" prefWidth="1180.0" spacing="5.0">
+            <children>
+                <Button fx:id="back_b" mnemonicParsing="false" onMouseClicked="#onPreviousPageClicked" prefHeight="60.0" prefWidth="150.0" style="-fx-background-color: #b7c7d6;" text="返回登入畫面" textAlignment="CENTER">
+                    <font>
+                        <Font size="18.0" />
+                    </font></Button>
+                <ChoiceBox fx:id="chest" onMouseClicked="#chestHandle" prefHeight="60.0" prefWidth="150.0" style="-fx-background-color: #ddcaa0; -fx-font-size: 18;" value="胸">
+                    <items>
+                        <FXCollections fx:factory="observableArrayList">
+                            <String fx:value="胸" />
+                            <String fx:value="上胸" />
+                            <String fx:value="下胸" />
+                        </FXCollections>
+                    </items>
+                </ChoiceBox>
+                <ChoiceBox fx:id="leg" onMouseClicked="#legHandle" prefHeight="60.0" prefWidth="150.0" style="-fx-font-size: 18; -fx-background-color: #ddcaa0;" value="腳">
+                    <items>
+                        <FXCollections fx:factory="observableArrayList">
+                            <String fx:value="腳" />
+                            <String fx:value="臀" />
+                            <String fx:value="股四頭" />
+                            <String fx:value="股二頭" />
+                            <String fx:value="小腿" />
+                        </FXCollections>
+                    </items>
+                </ChoiceBox>
+                <ChoiceBox fx:id="back" onMouseClicked="#backHandle" prefHeight="60.0" prefWidth="150.0" style="-fx-font-size: 18; -fx-background-color: #ddcaa0;" value="背">
+                    <items>
+                        <FXCollections fx:factory="observableArrayList">
+                            <String fx:value="背" />
+                            <String fx:value="豎脊肌" />
+                            <String fx:value="圓肌" />
+                        </FXCollections>
+                    </items>
+                </ChoiceBox>
+                <ChoiceBox fx:id="shoulder" onMouseClicked="#shoulderHandle" prefHeight="60.0" prefWidth="150.0" style="-fx-font-size: 18; -fx-background-color: #ddcaa0;" value="肩">
+                    <items>
+                        <FXCollections fx:factory="observableArrayList">
+                            <String fx:value="肩" />
+                            <String fx:value="前束" />
+                            <String fx:value="中束" />
+                            <String fx:value="後束" />
+                            <String fx:value="斜方肌" />
+                        </FXCollections>
+                    </items>
+                </ChoiceBox>
+                <ChoiceBox fx:id="arm" onMouseClicked="#armHandle" prefHeight="60.0" prefWidth="150.0" style="-fx-font-size: 18; -fx-background-color: #ddcaa0;" value="手臂">
+                    <items>
+                        <FXCollections fx:factory="observableArrayList">
+                            <String fx:value="手臂" />
+                            <String fx:value="肱二頭" />
+                            <String fx:value="肱三頭" />
+                        </FXCollections>
+                    </items>
+                </ChoiceBox>
+                <ChoiceBox fx:id="core" onMouseClicked="#coreHandle" prefHeight="60.0" prefWidth="150.0" style="-fx-font-size: 18; -fx-background-color: #ddcaa0;" value="核心">
+                    <items>
+                        <FXCollections fx:factory="observableArrayList">
+                            <String fx:value="核心" />
+                        </FXCollections>
+                    </items>
+                </ChoiceBox>
+                <ChoiceBox fx:id="aerobic" onMouseClicked="#aerobicHandle" prefHeight="60.0" prefWidth="150.0" style="-fx-font-size: 18; -fx-background-color: #ddcaa0;" value="有氧">
+                    <items>
+                        <FXCollections fx:factory="observableArrayList">
+                            <String fx:value="有氧" />
+                        </FXCollections>
+                    </items>
+                </ChoiceBox>
+            </children>
+        </HBox>
+        <HBox prefHeight="475.0" prefWidth="1180.0" spacing="5.0">
+            <children>
+                <Pane fx:id="display_muscle" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="475.0" prefWidth="400.0" />
+                <FlowPane alignment="CENTER_LEFT" hgap="10.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="475.0" prefWidth="750.0" vgap="10.0">
+                    <children>
+                        <Label prefWidth="235.0" style="-fx-background-color: #b7c7d6;" text="機械 :">
+                            <font>
+                                <Font size="18.0" />
+                            </font></Label>
+                        <Label prefWidth="235.0" style="-fx-background-color: #b7c7d6;" text="Cable :">
+                            <font>
+                                <Font size="18.0" />
+                            </font></Label>
+                        <Label prefWidth="235.0" style="-fx-background-color: #b7c7d6;" text="自由重量 :">
+                            <font>
+                                <Font size="18.0" />
+                            </font></Label>
+                        <ListView fx:id="machine" onMouseClicked="#clickMachineList" prefHeight="200.0" prefWidth="235.0" style="-fx-background-color: #b3b7a8; -fx-border-color: #b3b7a8;" />
+                        <ListView fx:id="cable" onMouseClicked="#clickCableList" prefHeight="200.0" prefWidth="235.0" style="-fx-background-color: #b3b7a8; -fx-border-color: #b3b7a8;" />
+                        <ListView fx:id="freeWeight" onMouseClicked="#clickFreeWeightList" prefHeight="200.0" prefWidth="235.0" style="-fx-background-color: #b3b7a8; -fx-border-color: #b3b7a8;" />
+                  <VBox prefHeight="200.0" prefWidth="200.0">
+                     <children>
+                        <Label prefHeight="25.0" prefWidth="200.0" style="-fx-background-color: #e9d5c6;" text="練力量:">
+                           <font>
+                              <Font size="18.0" />
+                           </font></Label>
+                        <Label prefHeight="25.0" prefWidth="200.0" style="-fx-background-color: #e9d5c6;" text="一組建議1~5下">
+                           <font>
+                              <Font size="18.0" />
+                           </font></Label>
+                        <Label prefHeight="25.0" prefWidth="200.0" style="-fx-background-color: #e9d5c6;">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <Label prefHeight="25.0" prefWidth="200.0" style="-fx-background-color: #e9d5c6;" text="練肌肥大:">
+                           <font>
+                              <Font size="18.0" />
+                           </font></Label>
+                        <Label prefHeight="25.0" prefWidth="200.0" style="-fx-background-color: #e9d5c6;" text="一組建議6~12下">
+                           <font>
+                              <Font size="18.0" />
+                           </font></Label>
+                        <Label prefHeight="25.0" prefWidth="200.0" style="-fx-background-color: #e9d5c6;" text="一個動作4組">
+                           <font>
+                              <Font size="18.0" />
+                           </font></Label>
+                        <Label prefHeight="25.0" prefWidth="200.0" style="-fx-background-color: #e9d5c6;" text="同個部位">
+                           <font>
+                              <Font size="18.0" />
+                           </font></Label>
+                        <Label prefHeight="25.0" prefWidth="200.0" style="-fx-background-color: #e9d5c6;" text="一星期不超過20組">
+                           <font>
+                              <Font size="18.0" />
+                           </font></Label>
+                     </children>
+                  </VBox>
+                  <VBox prefHeight="200.0" prefWidth="300.0" style="-fx-background-color: #e9d5c6;">
+                     <children>
+                        <Label prefWidth="300.0" style="-fx-background-color: #e9d5c6;" text="Contact us">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <Label prefWidth="300.0">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <Label prefWidth="300.0" text="洪晨哲——思想家">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <Label>
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <Label prefWidth="300.0" text="林群賀——達菲熊熊學家">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <Label>
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <Label text="謝文喨——文法學家">
+                           <font>
+                              <Font size="18.0" />
+                           </font></Label>
+                     </children>
+                  </VBox>
+                        <Button fx:id="set_table" mnemonicParsing="false" onMouseClicked="#onNextPageClicked" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #b7c7d6;" text="開始安排課表吧！">
+                     <font>
+                        <Font size="18.0" />
+                     </font></Button>
+                    </children>
+                    <padding>
+                        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+                    </padding>
+                </FlowPane>
+            </children>
+            <padding>
+                <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+            </padding>
+        </HBox>
+    </children>
+    <opaqueInsets>
+        <Insets />
+    </opaqueInsets>
+    <padding>
+        <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+    </padding>
+</VBox>
