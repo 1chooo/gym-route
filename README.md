@@ -41,9 +41,9 @@
 >   並且點擊下方確認並點選進入主畫面，如未點擊無法進入
 > 
 >* ####未勾選：
-> ![plot](/Users/linchunho/IdeaProjects/1102/FX/FinalProject/image/READMEImage/RuleUnchecked.png)
+> ![plot](https://img.onl/NzhgqW)
 >* ####已勾選:
-> ![plot](/Users/linchunho/IdeaProjects/1102/FX/FinalProject/image/READMEImage/RuleChecked.png)
+> ![plot]([/Users/linchunho/IdeaProjects/1102/FX/FinalProject/image/READMEImage/RuleChecked.png](https://img.onl/h55fsd))
 
 >###3. 首頁
 >進入主頁後，可以點選各個身體部位，瀏覽完各肌群以及動作後，便可開始安排課表
