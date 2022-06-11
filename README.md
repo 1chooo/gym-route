@@ -43,16 +43,16 @@
 >* ####未勾選：
 > ![plot](https://img.onl/NzhgqW)
 >* ####已勾選:
-> ![plot]([/Users/linchunho/IdeaProjects/1102/FX/FinalProject/image/READMEImage/RuleChecked.png](https://img.onl/h55fsd))
+> ![plot](https://img.onl/h55fsd)
 
 >###3. 首頁
 >進入主頁後，可以點選各個身體部位，瀏覽完各肌群以及動作後，便可開始安排課表
 > 
 >(以 "胸" 部位為示範操作)
 >* ####肌群展示：
-> ![plot](/Users/linchunho/IdeaProjects/1102/FX/FinalProject/image/READMEImage/HomeChest.png)
+> ![plot]([https://img.onl/N7UnAl)
 >* ####器材展示:
-> ![plot](/Users/linchunho/IdeaProjects/1102/FX/FinalProject/image/READMEImage/HomeChestGif.png)
+> ![plot](https://img.onl/uRnmsL)
 
 >###4.安排課表
 >進入安排課表環節，可以透過點擊部位來檢視訓練的器材，
