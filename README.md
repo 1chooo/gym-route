@@ -50,7 +50,7 @@
 > 
 >(以 "胸" 部位為示範操作)
 >* ####肌群展示：
-> ![plot]([https://img.onl/N7UnAl)
+> ![plot](https://img.onl/N7UnAl)
 >* ####器材展示:
 > ![plot](https://img.onl/uRnmsL)
 
