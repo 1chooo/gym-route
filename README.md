@@ -33,7 +33,7 @@
 >（不過要記得回來嘿🤗）
 > 
 >* 畫面展示：
-> ![plot](/Users/linchunho/IdeaProjects/1102/FX/FinalProject/image/READMEImage/LoginPage.png)
+> ![plot](https://img.onl/jqqp1t)
 
 >###2. 閱讀使用須知
 >   點擊 "這個" 按鈕進入程式的時候，請先閱讀使用須知，
