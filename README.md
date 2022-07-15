@@ -40,33 +40,31 @@
 > 
 >   並且點擊下方確認並點選進入主畫面，如未點擊無法進入
 > 
-<<<<<<< HEAD
+
 >* ####未勾選：
 > ![plot](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/71f2f7b8-650d-4f7d-b72d-495c41b476ff/RuleUnchecked.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20220707%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20220707T181516Z&X-Amz-Expires=86400&X-Amz-Signature=f579521421bcba35e00f410c2fb655d8790aa42ff810b3b5cd302aa6523e22d9&X-Amz-SignedHeaders=host&response-content-disposition=filename%20%3D%22RuleUnchecked.png%22&x-id=GetObject)
 >* ####已勾選:
 > ![plot](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/27ece2c0-58fa-4617-b015-cce6b310ad03/RuleChecked.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20220707%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20220707T181536Z&X-Amz-Expires=86400&X-Amz-Signature=207482655a50198c4b63d1eaf52b391c1875ad44a6dfbaf37e8a73bcf9e20bb0&X-Amz-SignedHeaders=host&response-content-disposition=filename%20%3D%22RuleChecked.png%22&x-id=GetObject)
-=======
 >* #### 未勾選：
 > ![plot](https://img.onl/NzhgqW)
 >* #### 已勾選:
 > ![plot](https://img.onl/h55fsd)
->>>>>>> bfac5a5 (test)
 
 >### 3. 首頁
 >進入主頁後，可以點選各個身體部位，瀏覽完各肌群以及動作後，便可開始安排課表
 > 
 >(以 "胸" 部位為示範操作)
-<<<<<<< HEAD
+
 >* ####肌群展示：
 > ![plot](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/145c75ba-ade9-4777-aa44-b1860b736f96/HomeChest.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20220707%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20220707T182025Z&X-Amz-Expires=86400&X-Amz-Signature=eb299883ce09c89857fa22c48785fe377bfd80a9a2c9b801361db0fa6873aca1&X-Amz-SignedHeaders=host&response-content-disposition=filename%20%3D%22HomeChest.png%22&x-id=GetObject)
 >* ####器材展示:
 > ![plot](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/9f577846-67a2-48b5-890b-4f878ee080eb/HomeChestGif.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20220707%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20220707T181953Z&X-Amz-Expires=86400&X-Amz-Signature=23b768998b2b85b05c6bd21a71aa0dd1568e128a8d540aea83907a70932e3cd9&X-Amz-SignedHeaders=host&response-content-disposition=filename%20%3D%22HomeChestGif.png%22&x-id=GetObject)
-=======
+
 >* #### 肌群展示：
 > ![plot](https://img.onl/N7UnAl)
 >* #### 器材展示:
 > ![plot](https://img.onl/uRnmsL)
->>>>>>> bfac5a5 (test)
+
 
 >### 4.安排課表
 >進入安排課表環節，可以透過點擊部位來檢視訓練的器材，
@@ -94,14 +92,13 @@
 >### 5. 預覽課表
 > 進入此頁面便可查看安排的課表，並且可以做確認課表，若需要修正，可以點擊 "回去安排課表" 繼續編輯訓練課表
 > 
-<<<<<<< HEAD
-> * ####預覽畫面：
+
+> * #### 預覽畫面：
 > ![plot](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/62096b18-b994-4bf8-96d0-4e32267e21fb/Preview.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20220707%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20220707T181708Z&X-Amz-Expires=86400&X-Amz-Signature=fc3ad89f0777508f5b8903b4bc045eee1a22c883af7d49d52f098b3f02377335&X-Amz-SignedHeaders=host&response-content-disposition=filename%20%3D%22Preview.png%22&x-id=GetObject)
-=======
+
 > * #### 預覽畫面：
 > ![plot](https://img.onl/YGxXmM)
->>>>>>> bfac5a5 (test)
-> 
+ 
 
 >### 6. 看完整月規劃
 > 進入此畫面便會把一個星期的課表安排推至接下來的一個月，訓練加油！
@@ -112,21 +109,19 @@
 > 
 > 不過回到要記得先把先前安排的內容刪除，刪除參數請用 "清空" 按鈕；輸入清單要刪除請用 "刪除整列"按鈕，便可繼續規劃
 > 
-<<<<<<< HEAD
-> * ####月曆展示：
+
+> * #### 月曆展示：
 > ![plot](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/dc1e333c-4a37-416d-b0cc-fac032c9dccd/Calender.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20220707%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20220707T181642Z&X-Amz-Expires=86400&X-Amz-Signature=d5f383ad87d4f77db6a7aaf2f4de85f619e1e7d6f6aefc8aae4ced87564f498b&X-Amz-SignedHeaders=host&response-content-disposition=filename%20%3D%22Calender.png%22&x-id=GetObject)
 > 
-> * ####點擊 "回去安排課表" 按鈕後回到首頁：
+> * #### 點擊 "回去安排課表" 按鈕後回到首頁：
 > ![plot](https://s3.us-west-2.amazonaws.com/secure.notion-static.com/b7207220-ad4c-478f-993a-d9a49b33db87/BackHome.png?X-Amz-Algorithm=AWS4-HMAC-SHA256&X-Amz-Content-Sha256=UNSIGNED-PAYLOAD&X-Amz-Credential=AKIAT73L2G45EIPT3X45%2F20220707%2Fus-west-2%2Fs3%2Faws4_request&X-Amz-Date=20220707T181615Z&X-Amz-Expires=86400&X-Amz-Signature=8ba0fad0853efcf0ab0a2d658f3ec57d745d95a32c061dfd596f2e8a979195b4&X-Amz-SignedHeaders=host&response-content-disposition=filename%20%3D%22BackHome.png%22&x-id=GetObject)
 > 
 
-##Source Code:
+
 > 
-=======
 > * #### 月曆展示：
 > ![plot](https://img.onl/L7taWb)
 > 
 > * #### 點擊 "回去安排課表" 按鈕後回到首頁：
 > ![plot](https://img.onl/MKtWSM)
 > 
->>>>>>> bfac5a5 (test)
