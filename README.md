@@ -43,7 +43,7 @@
 
 >* #### 未勾選：
 > ![plot](image/READMEImage/RuleUnchecked.png)
->* ####已勾選:
+>* #### 已勾選:
 > ![plot](image/READMEImage/RuleChecked.png)
 
 
