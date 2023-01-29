@@ -41,7 +41,7 @@
 >   並且點擊下方確認並點選進入主畫面，如未點擊無法進入
 > 
 
->* ####未勾選：
+>* #### 未勾選：
 > ![plot](image/READMEImage/RuleUnchecked.png)
 >* ####已勾選:
 > ![plot](image/READMEImage/RuleChecked.png)
@@ -52,9 +52,9 @@
 > 
 >(以 "胸" 部位為示範操作)
 
->* ####肌群展示：
+>* #### 肌群展示：
 > ![plot](image/READMEImage/HomeChest.png)
->* ####器材展示:
+>* #### 器材展示:
 > ![plot](image/READMEImage/HomeChestGif.png)
 
 
