@@ -1,9 +1,3 @@
-/**
- *  This project is CE1002 Final Project
- *  and the name of this project is
- *
- */
-
 package stu_109601003.finalproject;
 
 import javafx.application.Application;
@@ -24,20 +18,20 @@ public class Main extends Application {
 
   @Override
   public void start(Stage primaryStage) throws IOException {
-    FXMLLoader fxmlLoader1 = new FXMLLoader(Main.class.getResource("login.fxml"));
-    FXMLLoader fxmlLoader2 = new FXMLLoader(Main.class.getResource("home.fxml"));
-    FXMLLoader fxmlLoader3 = new FXMLLoader(Main.class.getResource("curriculum.fxml"));
-    FXMLLoader fxmlLoader4 = new FXMLLoader(Main.class.getResource("calendar.fxml"));
-    FXMLLoader fxmlLoader5 = new FXMLLoader(Main.class.getResource("rule.fxml"));
-    FXMLLoader fxmlLoader6 = new FXMLLoader(Main.class.getResource("preview.fxml"));
+    FXMLLoader loginLoader = new FXMLLoader(Main.class.getResource("login.fxml"));
+    FXMLLoader homeLoader = new FXMLLoader(Main.class.getResource("home.fxml"));
+    FXMLLoader curriculumLoader = new FXMLLoader(Main.class.getResource("curriculum.fxml"));
+    FXMLLoader calendarLoader = new FXMLLoader(Main.class.getResource("calendar.fxml"));
+    FXMLLoader ruleLoader = new FXMLLoader(Main.class.getResource("rule.fxml"));
+    FXMLLoader previewLoader = new FXMLLoader(Main.class.getResource("preview.fxml"));
 
     currentStage = primaryStage;
-    loginScene = new Scene(fxmlLoader1.load());
-    homeScene = new Scene(fxmlLoader2.load());
-    curriculumScene = new Scene(fxmlLoader3.load());
-    calendarScene = new Scene(fxmlLoader4.load());
-    ruleScene = new Scene(fxmlLoader5.load());
-    previewScene = new Scene(fxmlLoader6.load());
+    loginScene = new Scene(loginLoader.load());
+    homeScene = new Scene(homeLoader.load());
+    curriculumScene = new Scene(curriculumLoader.load());
+    calendarScene = new Scene(calendarLoader.load());
+    ruleScene = new Scene(ruleLoader.load());
+    previewScene = new Scene(previewLoader.load());
     currentStage.setTitle("施伯伯動起來！！！");
     currentStage.setScene(loginScene);
 
