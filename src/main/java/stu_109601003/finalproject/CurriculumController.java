@@ -70,199 +70,212 @@ public class CurriculumController {
    * Chest Parts
    */
 
-
   // Machine Chest
   ArrayList<String> machineChestArray = new ArrayList<>();
+
   public void addMachineChestArray() {
     String[] action = {
-            "機械胸推","機械上斜胸推",
-            "機械下斜胸推","蝴蝶機夾胸",
-            "史密斯胸推","史密斯上斜胸推",
-            "史密斯下斜胸推"
+        "機械胸推", "機械上斜胸推",
+        "機械下斜胸推", "蝴蝶機夾胸",
+        "史密斯胸推", "史密斯上斜胸推",
+        "史密斯下斜胸推"
     };
     Collections.addAll(machineChestArray, action);
   }
 
   // Cable Chest
   ArrayList<String> cableChestArray = new ArrayList<>();
+
   public void addCableChestArray() {
     String[] action = {
-            "cable夾胸","cable低位夾胸",
-            "cable高位夾胸"
+        "cable夾胸", "cable低位夾胸",
+        "cable高位夾胸"
     };
     Collections.addAll(cableChestArray, action);
   }
 
   // FreeWeight Chest
   ArrayList<String> freeWeightChestArray = new ArrayList<>();
+
   public void addFreeWeightChestArray() {
     String[] action = {
-            "平板槓鈴臥推","上斜槓鈴臥推",
-            "下斜槓鈴臥推","啞鈴飛鳥",
-            "啞鈴下壓飛鳥","啞鈴胸推",
-            "啞鈴上斜胸推","啞鈴下斜胸推",
-            "啞鈴胸推(窄握)","啞鈴上斜胸推(窄握)",
-            "啞鈴下斜胸推(窄握)","啞鈴前平舉"
+        "平板槓鈴臥推", "上斜槓鈴臥推",
+        "下斜槓鈴臥推", "啞鈴飛鳥",
+        "啞鈴下壓飛鳥", "啞鈴胸推",
+        "啞鈴上斜胸推", "啞鈴下斜胸推",
+        "啞鈴胸推(窄握)", "啞鈴上斜胸推(窄握)",
+        "啞鈴下斜胸推(窄握)", "啞鈴前平舉"
     };
     Collections.addAll(freeWeightChestArray, action);
   }
 
   // Machine Incline Chest
   ArrayList<String> machineInclineChestArray = new ArrayList<>();
+
   public void addMachineInclineChestArray() {
     String[] action = {
-            "機械胸推","機械上斜胸推",
-            "史密斯胸推","史密斯上斜胸推"
+        "機械胸推", "機械上斜胸推",
+        "史密斯胸推", "史密斯上斜胸推"
     };
     Collections.addAll(machineInclineChestArray, action);
   }
 
   // Cable Incline Chest
   ArrayList<String> cableInclineChestArray = new ArrayList<>();
+
   public void addCableInclineChestArray() {
     String[] action = {
-            "cable高位夾胸","cable低位夾胸"
+        "cable高位夾胸", "cable低位夾胸"
     };
     Collections.addAll(cableInclineChestArray, action);
   }
 
   // FreeWeight Incline Chest
   ArrayList<String> freeWeightInclineChestArray = new ArrayList<>();
+
   public void addFreeWeightInclineChestArray() {
-    String[] action =  {
-            "平板槓鈴臥推","上斜槓鈴臥推",
-            "啞鈴下壓飛鳥","啞鈴胸推",
-            "啞鈴上斜胸推","啞鈴胸推(窄握)",
-            "啞鈴上斜胸推(窄握)","啞鈴前平舉"
+    String[] action = {
+        "平板槓鈴臥推", "上斜槓鈴臥推",
+        "啞鈴下壓飛鳥", "啞鈴胸推",
+        "啞鈴上斜胸推", "啞鈴胸推(窄握)",
+        "啞鈴上斜胸推(窄握)", "啞鈴前平舉"
     };
     Collections.addAll(freeWeightInclineChestArray, action);
   }
 
   // Machine Decline Chest
   ArrayList<String> machineDeclineChestArray = new ArrayList<>();
+
   public void addMachineDeclineChestArray() {
-    String[] action =  {
-            "機械胸推","機械下斜胸推",
-            "蝴蝶機夾胸","史密斯胸推",
-            "史密斯下斜胸推"
+    String[] action = {
+        "機械胸推", "機械下斜胸推",
+        "蝴蝶機夾胸", "史密斯胸推",
+        "史密斯下斜胸推"
     };
     Collections.addAll(machineDeclineChestArray, action);
   }
 
   // Cable Decline Chest
   ArrayList<String> cableDeclineChestArray = new ArrayList<>();
+
   public void addCableDeclineChestArray() {
     String[] action = {
-            "cable夾胸","cable高位夾胸",
-            "cable低位夾胸"
+        "cable夾胸", "cable高位夾胸",
+        "cable低位夾胸"
     };
     Collections.addAll(cableDeclineChestArray, action);
   }
 
   // FreeWeight Decline Chest
   ArrayList<String> freeWeightDeclineChestArray = new ArrayList<>();
+
   public void addFreeWeightDeclineChestArray() {
     String[] action = {
-            "平板槓鈴臥推","下斜槓鈴臥推",
-            "啞鈴飛鳥","啞鈴下壓飛鳥",
-            "啞鈴胸推","啞鈴下斜胸推",
-            "啞鈴胸推(窄握)","啞鈴下斜胸推(窄握)",
-            "啞鈴前平舉"
+        "平板槓鈴臥推", "下斜槓鈴臥推",
+        "啞鈴飛鳥", "啞鈴下壓飛鳥",
+        "啞鈴胸推", "啞鈴下斜胸推",
+        "啞鈴胸推(窄握)", "啞鈴下斜胸推(窄握)",
+        "啞鈴前平舉"
     };
     Collections.addAll(freeWeightDeclineChestArray, action);
   }
-
 
   /**
    * Leg Parts
    */
 
-
   // Machine Leg
   ArrayList<String> machineLegArray = new ArrayList<>();
+
   public void addMachineLegArrayArray() {
     String[] action = {
-            "機械腿推","機械腿伸展",
-            "機械坐式腿屈曲","機械臥式腿屈曲",
-            "機械腿外展","機械腿內收",
-            "機械小腿伸展","機械臀後踢",
-            "機械臀橋","史密斯早安式",
-            "史密斯深蹲","史密斯屈膝禮弓步",
-            "史密斯保加利亞蹲","史密斯頸前蹲",
-            "史密斯哈克蹲", "史密斯臀橋"
+        "機械腿推", "機械腿伸展",
+        "機械坐式腿屈曲", "機械臥式腿屈曲",
+        "機械腿外展", "機械腿內收",
+        "機械小腿伸展", "機械臀後踢",
+        "機械臀橋", "史密斯早安式",
+        "史密斯深蹲", "史密斯屈膝禮弓步",
+        "史密斯保加利亞蹲", "史密斯頸前蹲",
+        "史密斯哈克蹲", "史密斯臀橋"
     };
     Collections.addAll(machineLegArray, action);
   }
 
   // Cable Leg
   ArrayList<String> cableLegArray = new ArrayList<>();
+
   public void addCableLegArray() {
     String[] action = {
-            "cable後踢","cable側踢",
-            "cable腿內收"
+        "cable後踢", "cable側踢",
+        "cable腿內收"
     };
     Collections.addAll(cableLegArray, action);
   }
 
   // FreeWeight Leg
   ArrayList<String> freeWeightLegArray = new ArrayList<>();
+
   public void addFreeWeightLegArray() {
     String[] action = {
-            "深蹲","啞鈴單腳蹲",
-            "啞鈴保加利亞蹲","啞鈴跨步蹲",
-            "硬舉","直膝硬舉",
-            "羅馬尼亞硬舉","啞鈴相撲蹲",
-            "相撲硬舉","槓鈴臀橋",
-            "啞鈴提腫"
+        "深蹲", "啞鈴單腳蹲",
+        "啞鈴保加利亞蹲", "啞鈴跨步蹲",
+        "硬舉", "直膝硬舉",
+        "羅馬尼亞硬舉", "啞鈴相撲蹲",
+        "相撲硬舉", "槓鈴臀橋",
+        "啞鈴提腫"
     };
     Collections.addAll(freeWeightLegArray, action);
   }
 
   // Machine Hip
   ArrayList<String> machineHipArray = new ArrayList<>();
+
   public void addMachineHipArrayArray() {
     String[] action = {
-            "機械腿推","機械腿外展",
-            "機械腿內收","機械臀後踢",
-            "機械臀橋", "史密斯早安式",
-            "史密斯深蹲","史密斯屈膝禮弓步",
-            "史密斯保加利亞蹲","史密斯頸前蹲",
-            "史密斯哈克蹲","史密斯臀橋"
+        "機械腿推", "機械腿外展",
+        "機械腿內收", "機械臀後踢",
+        "機械臀橋", "史密斯早安式",
+        "史密斯深蹲", "史密斯屈膝禮弓步",
+        "史密斯保加利亞蹲", "史密斯頸前蹲",
+        "史密斯哈克蹲", "史密斯臀橋"
     };
     Collections.addAll(machineHipArray, action);
   }
 
   // Cable Hip
   ArrayList<String> cableHipArray = new ArrayList<>();
+
   public void addCableHipArray() {
-    String[] action =  {
-            "cable後踢","cable側踢",
-            "cable腿內收"
+    String[] action = {
+        "cable後踢", "cable側踢",
+        "cable腿內收"
     };
     Collections.addAll(cableHipArray, action);
   }
 
   // FreeWeight Hip
   ArrayList<String> freeWeightHipArray = new ArrayList<>();
+
   public void addFreeWeightHipArray() {
-    String[] action =  {
-            "深蹲","啞鈴單腳蹲",
-            "啞鈴保加利亞蹲","啞鈴跨步蹲",
-            "硬舉","直膝硬舉",
-            "羅馬尼亞硬舉","啞鈴相撲蹲",
-            "相撲硬舉","槓鈴臀橋"
+    String[] action = {
+        "深蹲", "啞鈴單腳蹲",
+        "啞鈴保加利亞蹲", "啞鈴跨步蹲",
+        "硬舉", "直膝硬舉",
+        "羅馬尼亞硬舉", "啞鈴相撲蹲",
+        "相撲硬舉", "槓鈴臀橋"
     };
     Collections.addAll(freeWeightHipArray, action);
   }
 
   // Machine QuadricepsFemorisMuscle
   ArrayList<String> machineQuadricepsFemorisMuscleArray = new ArrayList<>();
+
   public void addMachineQuadricepsFemorisMuscleArrayArray() {
-    String[] action =  {
-            "機械腿推","啞鈴單腳蹲",
-            "機械腿伸展","史密斯深蹲",
-            "史密斯屈膝禮弓步","史密斯保加利亞蹲",
-            "史密斯頸前蹲","史密斯哈克蹲"
+    String[] action = {
+        "機械腿推", "啞鈴單腳蹲",
+        "機械腿伸展", "史密斯深蹲",
+        "史密斯屈膝禮弓步", "史密斯保加利亞蹲",
+        "史密斯頸前蹲", "史密斯哈克蹲"
     };
     Collections.addAll(machineQuadricepsFemorisMuscleArray, action);
   }
@@ -272,116 +285,124 @@ public class CurriculumController {
 
   // FreeWeight QuadricepsFemorisMuscle
   ArrayList<String> freeWeightQuadricepsFemorisMuscleArray = new ArrayList<>();
+
   public void addFreeWeightQuadricepsFemorisMuscleArray() {
-    String[] action =  {
-            "深蹲","啞鈴單腳蹲",
-            "啞鈴保加利亞蹲","啞鈴跨步蹲",
-            "硬舉", "羅馬尼亞硬舉",
-            "啞鈴相撲蹲","相撲硬舉"
+    String[] action = {
+        "深蹲", "啞鈴單腳蹲",
+        "啞鈴保加利亞蹲", "啞鈴跨步蹲",
+        "硬舉", "羅馬尼亞硬舉",
+        "啞鈴相撲蹲", "相撲硬舉"
     };
     Collections.addAll(freeWeightQuadricepsFemorisMuscleArray, action);
   }
 
   // Machine BicepsFemorisMuscle
   ArrayList<String> machineBicepsFemorisMuscleArray = new ArrayList<>();
+
   public void addMachineBicepsFemorisMuscleArray() {
-    String[] action =  {
-            "機械腿推","機械坐式腿屈曲",
-            "機械臥式腿屈曲","機械腿外展",
-            "機械腿內收","機械臀後踢",
-            "機械臀橋","史密斯早安式",
-            "史密斯深蹲","史密斯屈膝禮弓步",
-            "史密斯保加利亞蹲","史密斯頸前蹲",
-            "史密斯哈克蹲","史密斯臀橋"
+    String[] action = {
+        "機械腿推", "機械坐式腿屈曲",
+        "機械臥式腿屈曲", "機械腿外展",
+        "機械腿內收", "機械臀後踢",
+        "機械臀橋", "史密斯早安式",
+        "史密斯深蹲", "史密斯屈膝禮弓步",
+        "史密斯保加利亞蹲", "史密斯頸前蹲",
+        "史密斯哈克蹲", "史密斯臀橋"
     };
     Collections.addAll(machineBicepsFemorisMuscleArray, action);
   }
 
   // Cable BicepsFemorisMuscle
   ArrayList<String> cableBicepsFemorisMuscleArray = new ArrayList<>();
+
   public void addCableBicepsFemorisMuscleArray() {
-    String[] action =  {
-            "cable後踢","cable側踢",
-            "cable腿內收"
+    String[] action = {
+        "cable後踢", "cable側踢",
+        "cable腿內收"
     };
     Collections.addAll(cableBicepsFemorisMuscleArray, action);
   }
 
   // FreeWeight BicepsFemorisMuscle
   ArrayList<String> freeWeightBicepsFemorisMuscleArray = new ArrayList<>();
+
   public void addFreeWeightBicepsFemorisMuscleArray() {
-    String[] action =  {
-            "深蹲","啞鈴單腳蹲",
-            "啞鈴保加利亞蹲","啞鈴跨步蹲",
-            "硬舉", "直膝硬舉",
-            "羅馬尼亞硬舉","啞鈴相撲蹲",
-            "相撲硬舉","槓鈴臀橋"
+    String[] action = {
+        "深蹲", "啞鈴單腳蹲",
+        "啞鈴保加利亞蹲", "啞鈴跨步蹲",
+        "硬舉", "直膝硬舉",
+        "羅馬尼亞硬舉", "啞鈴相撲蹲",
+        "相撲硬舉", "槓鈴臀橋"
     };
     Collections.addAll(freeWeightBicepsFemorisMuscleArray, action);
   }
 
   // Machine Calf
   ArrayList<String> machineCalfArray = new ArrayList<>();
+
   public void addMachineCalfArray() {
-    String[] action =  {
-            "機械小腿伸展"
+    String[] action = {
+        "機械小腿伸展"
     };
     Collections.addAll(machineCalfArray, action);
   }
 
   // Cable Calf
   ArrayList<String> cableCalfArray = new ArrayList<>();
+
   public void addCableCalfArray() {
-    String[] action =  {
-            "cable後踢","cable側踢",
-            "cable腿內收"
+    String[] action = {
+        "cable後踢", "cable側踢",
+        "cable腿內收"
     };
     Collections.addAll(cableCalfArray, action);
   }
 
   // FreeWeight Calf
   ArrayList<String> freeWeightCalfArray = new ArrayList<>();
+
   public void addFreeWeightCalfArray() {
-    String[] action =  {
-            "啞鈴提腫"
+    String[] action = {
+        "啞鈴提腫"
     };
     Collections.addAll(freeWeightCalfArray, action);
   }
-
 
   /**
    * Back Parts
    */
 
-
   // Machine Back
   ArrayList<String> machineBackArray = new ArrayList<>();
+
   public void addMachineBackArray() {
-    String[] action =  {
-            "機械水平划船","機械反手高位下拉",
-            "機械高位下拉", "機械引體向上",
-            "史密斯滑船"
+    String[] action = {
+        "機械水平划船", "機械反手高位下拉",
+        "機械高位下拉", "機械引體向上",
+        "史密斯滑船"
     };
     Collections.addAll(machineBackArray, action);
   }
 
   // Cable Back
   ArrayList<String> cableBackArray = new ArrayList<>();
+
   public void addCableBackArray() {
-    String[] action =  {
-            "cable水平划船","cable反手高位下拉",
-            "cable高位下拉","cable直臂下壓"
+    String[] action = {
+        "cable水平划船", "cable反手高位下拉",
+        "cable高位下拉", "cable直臂下壓"
     };
     Collections.addAll(cableBackArray, action);
   }
 
   // FreeWeight Back
   ArrayList<String> freeWeightBackArray = new ArrayList<>();
+
   public void addFreeWeightBackArray() {
-    String[] action =  {
-            "單臂啞鈴划船","槓鈴划船",
-            "w槓鈴划船","直膝硬舉",
-            "羅馬尼亞硬舉"
+    String[] action = {
+        "單臂啞鈴划船", "槓鈴划船",
+        "w槓鈴划船", "直膝硬舉",
+        "羅馬尼亞硬舉"
     };
     Collections.addAll(freeWeightBackArray, action);
   }
@@ -394,165 +415,179 @@ public class CurriculumController {
 
   // FreeWeight ErectorSpinae
   ArrayList<String> freeWeightErectorSpinaeArray = new ArrayList<>();
+
   public void addFreeWeightErectorSpinaeArray() {
-    String[] action =  {
-            "直膝硬舉","羅馬尼亞硬舉"
+    String[] action = {
+        "直膝硬舉", "羅馬尼亞硬舉"
     };
     Collections.addAll(freeWeightErectorSpinaeArray, action);
   }
 
   // Machine TeresMuscle
   ArrayList<String> machineTeresMuscleArray = new ArrayList<>();
+
   public void addMachineTeresMuscleArray() {
-    String[] action =  {
-            "機械反手高位下拉","機械高位下拉",
-            "機械引體向上","史密斯滑船"
+    String[] action = {
+        "機械反手高位下拉", "機械高位下拉",
+        "機械引體向上", "史密斯滑船"
     };
     Collections.addAll(machineTeresMuscleArray, action);
   }
 
   // Cable TeresMuscle
   ArrayList<String> cableTeresMuscleArray = new ArrayList<>();
+
   public void addCableTeresMuscleArray() {
-    String[] action =  {
-            "cable反手高位下拉","cable高位下拉",
-            "cable直臂下壓"
+    String[] action = {
+        "cable反手高位下拉", "cable高位下拉",
+        "cable直臂下壓"
     };
     Collections.addAll(cableTeresMuscleArray, action);
   }
 
   // FreeWeight TeresMuscle
   ArrayList<String> freeWeightTeresMuscleArray = new ArrayList<>();
+
   public void addFreeWeightTeresMuscleArray() {
-    String[] action =  {
-            "單臂啞鈴划船","槓鈴划船",
-            "w槓鈴划船"};
+    String[] action = {
+        "單臂啞鈴划船", "槓鈴划船",
+        "w槓鈴划船" };
     Collections.addAll(freeWeightTeresMuscleArray, action);
   }
-
 
   /**
    * Shoulder Parts
    */
 
-
   // Machine Shoulder
   ArrayList<String> machineShoulderArray = new ArrayList<>();
+
   public void addMachineShoulderArray() {
     String[] action = {
-            "機械肩推","機械飛鳥",
-            "蝴蝶機反向飛鳥"
+        "機械肩推", "機械飛鳥",
+        "蝴蝶機反向飛鳥"
     };
     Collections.addAll(machineShoulderArray, action);
   }
 
   // Cable Shoulder
   ArrayList<String> cableShoulderArray = new ArrayList<>();
+
   public void addCableShoulderArray() {
     String[] action = {
-            "cable肩推","cable側平舉",
-            "cable臉拉","cable上拉",
-            "cable反向飛鳥","cable聳肩"
+        "cable肩推", "cable側平舉",
+        "cable臉拉", "cable上拉",
+        "cable反向飛鳥", "cable聳肩"
     };
     Collections.addAll(cableShoulderArray, action);
   }
 
   // FreeWeight Shoulder
   ArrayList<String> freeWeightShoulderArray = new ArrayList<>();
+
   public void addFreeWeightShoulderArray() {
     String[] action = {
-            "槓鈴肩推","啞鈴肩推",
-            "啞鈴前平舉","啞鈴側平舉",
-            "啞鈴Y平舉","槓鈴上拉",
-            "w槓上拉","啞鈴反向飛鳥",
-            "槓鈴聳肩","啞鈴聳肩",
-            "上斜槓鈴臥推"
+        "槓鈴肩推", "啞鈴肩推",
+        "啞鈴前平舉", "啞鈴側平舉",
+        "啞鈴Y平舉", "槓鈴上拉",
+        "w槓上拉", "啞鈴反向飛鳥",
+        "槓鈴聳肩", "啞鈴聳肩",
+        "上斜槓鈴臥推"
     };
     Collections.addAll(freeWeightShoulderArray, action);
   }
 
   // Machine AnteriorDeltoid
   ArrayList<String> machineAnteriorDeltoidArray = new ArrayList<>();
+
   public void addMachineAnteriorDeltoidArray() {
     String[] action = {
-            "機械肩推","機械飛鳥"
+        "機械肩推", "機械飛鳥"
     };
     Collections.addAll(machineAnteriorDeltoidArray, action);
   }
 
   // Cable AnteriorDeltoid
   ArrayList<String> cableAnteriorDeltoidArray = new ArrayList<>();
+
   public void addCableAnteriorDeltoidArray() {
     String[] action = {
-            "cable肩推","cable側平舉"
+        "cable肩推", "cable側平舉"
     };
     Collections.addAll(cableAnteriorDeltoidArray, action);
   }
 
   // FreeWeight AnteriorDeltoid
   ArrayList<String> freeWeightAnteriorDeltoidArray = new ArrayList<>();
+
   public void addFreeWeightAnteriorDeltoidArray() {
     String[] action = {
-            "槓鈴肩推","啞鈴肩推",
-            "啞鈴前平舉","啞鈴Y平舉",
-            "上斜槓鈴臥推"
+        "槓鈴肩推", "啞鈴肩推",
+        "啞鈴前平舉", "啞鈴Y平舉",
+        "上斜槓鈴臥推"
     };
     Collections.addAll(freeWeightAnteriorDeltoidArray, action);
   }
 
   // Machine LateralDeltoid
   ArrayList<String> machineLateralDeltoidArray = new ArrayList<>();
+
   public void addMachineLateralDeltoidArray() {
     String[] action = {
-            "機械肩推","機械飛鳥"
+        "機械肩推", "機械飛鳥"
     };
     Collections.addAll(machineLateralDeltoidArray, action);
   }
 
   // Cable LateralDeltoid
   ArrayList<String> cableLateralDeltoidArray = new ArrayList<>();
+
   public void addCableLateralDeltoidArray() {
     String[] action = {
-            "cable肩推","cable側平舉",
-            "cable上拉"
+        "cable肩推", "cable側平舉",
+        "cable上拉"
     };
     Collections.addAll(cableLateralDeltoidArray, action);
   }
 
   // FreeWeight LateralDeltoid
   ArrayList<String> freeWeightLateralDeltoidArray = new ArrayList<>();
+
   public void addFreeWeightLateralDeltoidArray() {
     String[] action = {
-            "槓鈴肩推","啞鈴肩推",
-            "啞鈴側平舉","啞鈴Y平舉",
-            "槓鈴上拉","w槓上拉"
+        "槓鈴肩推", "啞鈴肩推",
+        "啞鈴側平舉", "啞鈴Y平舉",
+        "槓鈴上拉", "w槓上拉"
     };
     Collections.addAll(freeWeightLateralDeltoidArray, action);
   }
 
   // Machine PosteriorDeltoid
   ArrayList<String> machinePosteriorDeltoidArray = new ArrayList<>();
+
   public void addMachinePosteriorDeltoidArray() {
     String[] action = {
-            "蝴蝶機反向飛鳥"
+        "蝴蝶機反向飛鳥"
     };
     Collections.addAll(machinePosteriorDeltoidArray, action);
   }
 
   // Cable PosteriorDeltoid
   ArrayList<String> cablePosteriorDeltoidArray = new ArrayList<>();
+
   public void addCablePosteriorDeltoidArray() {
     String[] action = {
-            "cable臉拉","cable反向飛鳥"
+        "cable臉拉", "cable反向飛鳥"
     };
     Collections.addAll(cablePosteriorDeltoidArray, action);
   }
 
   // FreeWeight PosteriorDel
   ArrayList<String> freeWeightPosteriorDeltoidArray = new ArrayList<>();
+
   public void addFreeWeightPosteriorDeltoidArray() {
     String[] action = {
-            "啞鈴反向飛鳥"
+        "啞鈴反向飛鳥"
     };
     Collections.addAll(freeWeightPosteriorDeltoidArray, action);
   }
@@ -562,147 +597,154 @@ public class CurriculumController {
 
   // Cable TrapeziusMuscle
   ArrayList<String> cableTrapeziusMuscleArray = new ArrayList<>();
+
   public void addCableTrapeziusMuscleArray() {
     String[] action = {
-            "cable聳肩"
+        "cable聳肩"
     };
     Collections.addAll(cableTrapeziusMuscleArray, action);
   }
 
   // FreeWeight TrapeziusMuscle
   ArrayList<String> freeTrapeziusMuscleHipArray = new ArrayList<>();
+
   public void addFreeTrapeziusMuscleHipArray() {
     String[] action = {
-            "槓鈴聳肩","啞鈴聳肩"
+        "槓鈴聳肩", "啞鈴聳肩"
     };
     Collections.addAll(freeTrapeziusMuscleHipArray, action);
   }
-
 
   /**
    * Arm parts
    */
 
-
   // Machine Arm
   ArrayList<String> machineArmArray = new ArrayList<>();
+
   public void addMachineArmArray() {
-    String[] action =  {
-            "機械二頭彎曲","機械三頭伸展"
+    String[] action = {
+        "機械二頭彎曲", "機械三頭伸展"
     };
     Collections.addAll(machineArmArray, action);
   }
 
   // Cable Arm
   ArrayList<String> cableArmArray = new ArrayList<>();
+
   public void addCableArmArray() {
-    String[] action =  {
-            "cable二頭彎曲","cable三頭伸展"
+    String[] action = {
+        "cable二頭彎曲", "cable三頭伸展"
     };
     Collections.addAll(cableArmArray, action);
   }
 
   // FreeWeight Arm
   ArrayList<String> freeWeightArmArray = new ArrayList<>();
+
   public void addFreeWeightArmArray() {
-    String[] action =  {
-            "啞鈴二頭彎曲","啞鈴三頭伸展",
-            "W槓二頭彎曲", "W槓三頭伸展",
-            "槓鈴二頭彎曲","槓鈴三頭伸展",
-            "槓鈴窄握臥推"
+    String[] action = {
+        "啞鈴二頭彎曲", "啞鈴三頭伸展",
+        "W槓二頭彎曲", "W槓三頭伸展",
+        "槓鈴二頭彎曲", "槓鈴三頭伸展",
+        "槓鈴窄握臥推"
     };
     Collections.addAll(freeWeightArmArray, action);
   }
 
   // Machine Biceps
   ArrayList<String> machineBicepsArray = new ArrayList<>();
+
   public void addMachineBicepsArray() {
-    String[] action =  {
-            "機械二頭彎曲"
+    String[] action = {
+        "機械二頭彎曲"
     };
     Collections.addAll(machineBicepsArray, action);
   }
 
   // Cable Biceps
   ArrayList<String> cableBicepsArray = new ArrayList<>();
+
   public void addCableBicepsArray() {
-    String[] action =  {
-            "cable二頭彎曲"
+    String[] action = {
+        "cable二頭彎曲"
     };
     Collections.addAll(cableBicepsArray, action);
   }
 
   // FreeWeight Biceps
   ArrayList<String> freeWeightBicepsArray = new ArrayList<>();
+
   public void addFreeWeightBicepsArray() {
-    String[] action =  {
-            "啞鈴二頭彎曲","W槓二頭彎曲",
-            "槓鈴二頭彎曲"
+    String[] action = {
+        "啞鈴二頭彎曲", "W槓二頭彎曲",
+        "槓鈴二頭彎曲"
     };
     Collections.addAll(freeWeightBicepsArray, action);
   }
 
   // MachineTriceps
   ArrayList<String> machineTricepsArray = new ArrayList<>();
+
   public void addMachineTricepsArray() {
-    String[] action =  {
-            "機械三頭伸展"
+    String[] action = {
+        "機械三頭伸展"
     };
     Collections.addAll(machineTricepsArray, action);
   }
 
   // Cable Triceps
   ArrayList<String> cableTricepsArray = new ArrayList<>();
+
   public void addCableTricepsArray() {
-    String[] action =  {
-            "cable三頭伸展"
+    String[] action = {
+        "cable三頭伸展"
     };
     Collections.addAll(cableBicepsArray, action);
   }
 
   // FreeWeight Triceps
   ArrayList<String> freeWeightTricepsArray = new ArrayList<>();
+
   public void addFreeWeightTricepsArray() {
-    String[] action =  {
-            "啞鈴三頭伸展","W槓三頭伸展",
-            "槓鈴三頭伸展","槓鈴窄握臥推"
+    String[] action = {
+        "啞鈴三頭伸展", "W槓三頭伸展",
+        "槓鈴三頭伸展", "槓鈴窄握臥推"
     };
     Collections.addAll(freeWeightBicepsArray, action);
   }
-
 
   /**
    * Core Parts
    */
 
-
   // Machine Core
   // Cable Core
   // FreeWeight Core
   ArrayList<String> coreArray = new ArrayList<>();
+
   public void addCoreArray() {
-    String[] action =  {
-            "機械腹部訓練","機械腹部旋轉"
+    String[] action = {
+        "機械腹部訓練", "機械腹部旋轉"
     };
     Collections.addAll(coreArray, action);
   }
-
 
   /**
    * Aerobic Parts
    */
 
-
   // Machine Aerobic
   // Cable Aerobic
   // FreeWeight Aerobic
   ArrayList<String> aerobicArray = new ArrayList<>();
+
   public void addAerobicArray() {
-    String[] action =  {
-            "跑步機","橢圓機",
-            "樓梯機","踏步車",
-            "臥式健身車","立式健身車",
-            "划船機"
+    String[] action = {
+        "跑步機", "橢圓機",
+        "樓梯機", "踏步車",
+        "臥式健身車", "立式健身車",
+        "划船機"
     };
     Collections.addAll(aerobicArray, action);
   }
@@ -713,12 +755,13 @@ public class CurriculumController {
 
   // weekday array initialize
   ArrayList<String> weekdayArray = new ArrayList<>();
+
   public void addWeekdayArray() throws IOException {
-    String[] action =  {
-            "星期日","星期一",
-            "星期二","星期三",
-            "星期四","星期五",
-            "星期六"
+    String[] action = {
+        "星期日", "星期一",
+        "星期二", "星期三",
+        "星期四", "星期五",
+        "星期六"
     };
     Collections.addAll(weekdayArray, action);
   }
@@ -729,12 +772,13 @@ public class CurriculumController {
 
   // order array initialize
   ArrayList<String> orderArray = new ArrayList<>();
+
   public void addOrderArray() throws IOException {
-    String[] action =  {
-            "1", "2",
-            "3", "4",
-            "5", "6",
-            "7", "8"
+    String[] action = {
+        "1", "2",
+        "3", "4",
+        "5", "6",
+        "7", "8"
     };
     Collections.addAll(orderArray, action);
   }
@@ -936,26 +980,28 @@ public class CurriculumController {
     status.setText("已清空選項");
     sets.clear();
     times.clear();
-    order.setValue("1");//順序序順
-    weekday.setValue("星期日");//星期
+    order.setValue("1");// 順序序順
+    weekday.setValue("星期日");// 星期
   }
 
   // Column: weekday; Row: order
 
   static ArrayList<ArrayList<String>> screenArrayList = new ArrayList<>();
   ObservableList<String> screenlist = FXCollections.observableArrayList();
+
   public void clickedEnter() throws IOException {
     try {
       ArrayList<String> tmp = new ArrayList<>();
       tmp.add(weekday.getValue().toString());
       tmp.add(order.getValue().toString());
-      tmp.add(wholeComboBox.getValue().toString() + " " + times.getText() + "下 X " + sets.getText() +"組");
+      tmp.add(wholeComboBox.getValue().toString() + " " + times.getText() + "下 X " + sets.getText() + "組");
       screenArrayList.add(tmp);
       status.setText("恭喜你輸入成功");
-      //ObservableList<String> screenlist = FXCollections.observableArrayList();
+      // ObservableList<String> screenlist = FXCollections.observableArrayList();
       screenlist.clear();
-      for (int i = 0; i < screenArrayList.size(); i++){
-        screenlist.add(screenArrayList.get(i).get(0) + ", " + screenArrayList.get(i).get(1) + ", " + screenArrayList.get(i).get(2));
+      for (int i = 0; i < screenArrayList.size(); i++) {
+        screenlist.add(screenArrayList.get(i).get(0) + ", " + screenArrayList.get(i).get(1) + ", "
+            + screenArrayList.get(i).get(2));
       }
       screen.setItems(screenlist);
     } catch (Exception exception) {
@@ -965,31 +1011,30 @@ public class CurriculumController {
   }
 
   public void clickedClearRow() throws IOException {
-    try{
+    try {
       int screen_index = screen.getSelectionModel().getSelectedIndex();
       if (screen_index == -1) {
         status.setText("請選取清單欲刪除資料");
-      }
-      else{
+      } else {
         int column = dict.get(screenArrayList.get(screen_index).get(0));
         int row = Integer.parseInt(screenArrayList.get(screen_index).get(1)) - 1;
 
         screenArrayList.remove(screen_index);
         screenlist.clear();
-        for (int i = 0; i < screenArrayList.size(); i++){
-          screenlist.add(screenArrayList.get(i).get(0) + ", " + screenArrayList.get(i).get(1) + ", " + screenArrayList.get(i).get(2));
+        for (int i = 0; i < screenArrayList.size(); i++) {
+          screenlist.add(screenArrayList.get(i).get(0) + ", " + screenArrayList.get(i).get(1) + ", "
+              + screenArrayList.get(i).get(2));
         }
         screen.setItems(screenlist);
         curriculumForWeek[row][column] = null;
         PreviewController.displayScreenArrayToPreview();
       }
-    }
-    catch (Exception e) {
+    } catch (Exception e) {
       status.setText("請選取清單欲刪除資料");
     }
   }
 
-  //Used by previewController
+  // Used by previewController
   static String[][] curriculumForWeek = new String[8][7];
   Dictionary<String, Integer> dict = new Hashtable<>();
 
@@ -1007,10 +1052,9 @@ public class CurriculumController {
     loadScreenArray();
   }
 
-
   @FXML
   private void initialize() throws IOException {
-    //loadScreenArray
+    // loadScreenArray
     dict.put("星期日", 0);
     dict.put("星期一", 1);
     dict.put("星期二", 2);

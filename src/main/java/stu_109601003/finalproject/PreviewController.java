@@ -13,17 +13,16 @@ public class PreviewController {
   Button viewCalender;
   @FXML
   Label c00, c01, c02, c03, c04, c05, c06,
-          c10, c11, c12, c13, c14, c15, c16,
-          c20, c21, c22, c23, c24, c25, c26,
-          c30, c31, c32, c33, c34, c35, c36,
-          c40, c41, c42, c43, c44, c45, c46,
-          c50, c51, c52, c53, c54, c55, c56,
-          c60, c61, c62, c63, c64, c65, c66,
-          c70, c71, c72, c73, c74, c75, c76;
-
-
+      c10, c11, c12, c13, c14, c15, c16,
+      c20, c21, c22, c23, c24, c25, c26,
+      c30, c31, c32, c33, c34, c35, c36,
+      c40, c41, c42, c43, c44, c45, c46,
+      c50, c51, c52, c53, c54, c55, c56,
+      c60, c61, c62, c63, c64, c65, c66,
+      c70, c71, c72, c73, c74, c75, c76;
 
   static Label[][] curriculumLabelMatrix;
+
   public void clickedBackCurriculum() throws IOException {
     Main.currentStage.setScene(Main.curriculumScene);
   }
@@ -31,7 +30,7 @@ public class PreviewController {
   public void clickedViewCalender() throws IOException {
     CalendarController.loadCurriculumToWeekToDayListOfWeek();
     Main.currentStage.setScene(Main.calendarScene);
-    System.out.println(CalendarController.dayListOfWeek);//test
+    System.out.println(CalendarController.dayListOfWeek);// test
     CalendarController.displayCalendar();
   }
 
@@ -45,16 +44,15 @@ public class PreviewController {
 
   @FXML
   public void initialize() throws IOException {
-    curriculumLabelMatrix = new Label[][]{
-            {c00, c01, c02, c03, c04, c05, c06},
-            {c10, c11, c12, c13, c14, c15, c16},
-            {c20, c21, c22, c23, c24, c25, c26},
-            {c30, c31, c32, c33, c34, c35, c36},
-            {c40, c41, c42, c43, c44, c45, c46},
-            {c50, c51, c52, c53, c54, c55, c56},
-            {c60, c61, c62, c63, c64, c65, c66},
-            {c70, c71, c72, c73, c74, c75, c76}};
+    curriculumLabelMatrix = new Label[][] {
+        { c00, c01, c02, c03, c04, c05, c06 },
+        { c10, c11, c12, c13, c14, c15, c16 },
+        { c20, c21, c22, c23, c24, c25, c26 },
+        { c30, c31, c32, c33, c34, c35, c36 },
+        { c40, c41, c42, c43, c44, c45, c46 },
+        { c50, c51, c52, c53, c54, c55, c56 },
+        { c60, c61, c62, c63, c64, c65, c66 },
+        { c70, c71, c72, c73, c74, c75, c76 } };
   }
-
 
 }

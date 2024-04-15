@@ -44,5 +44,7 @@ public class Main extends Application {
     currentStage.show();
   }
 
-  public static void main(String[] Args) { launch(); }
+  public static void main(String[] Args) {
+    launch();
+  }
 }
