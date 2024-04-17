@@ -10,7 +10,7 @@ public class App extends Application {
     @Override
     public void start(Stage primaryStage) {
         SceneController.setStage(primaryStage);
-        SceneController.switchScene(PAGE.PRIMARY);
+        SceneController.switchScene(PAGE.LOGIN);
     }
 
     public static void main(String[] args) {

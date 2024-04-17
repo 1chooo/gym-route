@@ -33,7 +33,7 @@ public class RuleController {
     if (!checkBox.isSelected()) {
       status.setText("記得勾選同意上述規範哦");
     } else {
-      SceneController.switchScene(PAGE.SECONDARY);
+      SceneController.switchScene(PAGE.HOME);
     }
   }
 }
