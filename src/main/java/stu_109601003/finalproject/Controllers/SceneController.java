@@ -17,12 +17,15 @@ public class SceneController {
 
     public static void switchScene(String fxml) {
         try {
-            // System.out.println("Current Path: " + SceneController.class.getResource(""));
             Parent root = FXMLLoader.load(App.class.getResource(fxml + ".fxml"));
-            stage.setScene(new Scene(root, 640, 480));
+            stage.setScene(new Scene(root, 1200, 675.0));
             stage.show();
         } catch (IOException e) {
             e.printStackTrace();
         }
+    }
+
+    public static void exitApplication() {
+        stage.close();
     }
 }
