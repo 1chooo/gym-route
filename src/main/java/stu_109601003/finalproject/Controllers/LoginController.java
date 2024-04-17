@@ -11,13 +11,13 @@ import java.io.IOException;
 
 public class LoginController {
   @FXML
-  Pane pane;
+  private Pane pane;
   @FXML
-  Button enter;
+  private Button enter;
   @FXML
-  ImageView imageView;
+  private ImageView imageView;
   @FXML
-  Button exit;
+  private Button exit;
 
   @FXML
   public void initialize() {
@@ -30,7 +30,7 @@ public class LoginController {
 
   @FXML
   public void onStartPressed() throws IOException {
-    SceneController.switchScene("secondary");
+    SceneController.switchScene(PAGE.RULE);
   }
 
   @FXML

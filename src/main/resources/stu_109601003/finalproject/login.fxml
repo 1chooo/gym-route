@@ -13,7 +13,7 @@
         <ImageView fx:id="imageView" fitHeight="675.0" fitWidth="1200.0" pickOnBounds="true"
             preserveRatio="true">
             <image>
-                <Image url="@../../../../../image/login.png" />
+                <Image url="@../imgs/login.png" />
             </image>
         </ImageView>
         <Button fx:id="enter" layoutX="560.0" layoutY="220.0" mnemonicParsing="false"

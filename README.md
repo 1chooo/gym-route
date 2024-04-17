@@ -17,6 +17,7 @@
   </div>
 </div>
 
+This is the project that making an workout app to check the workout equipments.
 
 **TOC**
 
