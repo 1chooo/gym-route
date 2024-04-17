@@ -15,7 +15,7 @@ public class SceneController {
         stage = primaryStage;
     }
 
-    public static void switchScene(PageName fxml) {
+    public static void switchScene(PAGE fxml) {
         try {
             Parent root = FXMLLoader.load(App.class.getResource(fxml.getFileName() + ".fxml"));
             stage.setScene(new Scene(root, 1200, 675.0));

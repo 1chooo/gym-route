@@ -6,6 +6,6 @@ public class SecondaryController {
 
     @FXML
     private void switchToPrimary() {
-        SceneController.switchScene(PageName.PRIMARY);
+        SceneController.switchScene(PAGE.PRIMARY);
     }
 }

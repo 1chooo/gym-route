@@ -1,6 +1,6 @@
 package stu_109601003.finalproject.Controllers;
 
-public enum PageName {
+public enum PAGE {
     PRIMARY("primary"),
     SECONDARY("secondary"),
     LOGIN("login"),
@@ -8,7 +8,7 @@ public enum PageName {
 
     private final String fileName;
 
-    PageName(String fileName) {
+    PAGE(String fileName) {
         this.fileName = fileName;
     }
 

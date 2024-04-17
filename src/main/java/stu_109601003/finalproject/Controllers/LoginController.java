@@ -30,7 +30,7 @@ public class LoginController {
 
   @FXML
   public void onStartPressed() throws IOException {
-    SceneController.switchScene(PageName.RULE);
+    SceneController.switchScene(PAGE.RULE);
   }
 
   @FXML
