@@ -7,7 +7,7 @@
 <Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity"
     prefHeight="675.0" prefWidth="1200.0" style="-fx-background-color: #f4f1ec;"
     xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1"
-    fx:controller="stu_109601003.finalproject.RuleController">
+    fx:controller="stu_109601003.finalproject.Controllers.RuleController">
     <children>
         <Label fx:id="status" layoutX="530.0" layoutY="560.0" textFill="MAROON" />
         <Label fx:id="title" layoutX="528.0" layoutY="57.0" text="使用須知">

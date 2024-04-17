@@ -11,7 +11,7 @@
     minHeight="-Infinity" minWidth="-Infinity" onKeyPressed="#handle" prefHeight="675.0"
     prefWidth="1200.0" spacing="10.0" style="-fx-background-color: #f4f1ec;"
     xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1"
-    fx:controller="stu_109601003.finalproject.HomeController">
+    fx:controller="stu_109601003.finalproject.Controllers.HomeController">
     <children>
         <Label fx:id="title" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity"
             minWidth="-Infinity" prefHeight="50.0" prefWidth="194.0" text="濕伯伯動起來!!!">
