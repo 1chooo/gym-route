@@ -28,7 +28,7 @@
                         <Font size="18.0" />
                     </font>
                 </Button>
-                <ChoiceBox fx:id="chest" onMouseClicked="#chestHandle" prefHeight="60.0"
+                <ChoiceBox fx:id="chest" onMouseClicked="#clickedChest" prefHeight="60.0"
                     prefWidth="150.0" style="-fx-background-color: #ddcaa0; -fx-font-size: 18;"
                     value="胸">
                     <items>
@@ -39,7 +39,7 @@
                         </FXCollections>
                     </items>
                 </ChoiceBox>
-                <ChoiceBox fx:id="leg" onMouseClicked="#legHandle" prefHeight="60.0"
+                <ChoiceBox fx:id="leg" onMouseClicked="#clickedLeg" prefHeight="60.0"
                     prefWidth="150.0" style="-fx-font-size: 18; -fx-background-color: #ddcaa0;"
                     value="腳">
                     <items>
@@ -52,7 +52,7 @@
                         </FXCollections>
                     </items>
                 </ChoiceBox>
-                <ChoiceBox fx:id="back" onMouseClicked="#backHandle" prefHeight="60.0"
+                <ChoiceBox fx:id="back" onMouseClicked="#clickedBack" prefHeight="60.0"
                     prefWidth="150.0" style="-fx-font-size: 18; -fx-background-color: #ddcaa0;"
                     value="背">
                     <items>
@@ -63,7 +63,7 @@
                         </FXCollections>
                     </items>
                 </ChoiceBox>
-                <ChoiceBox fx:id="shoulder" onMouseClicked="#shoulderHandle" prefHeight="60.0"
+                <ChoiceBox fx:id="shoulder" onMouseClicked="#clickedShoulder" prefHeight="60.0"
                     prefWidth="150.0" style="-fx-font-size: 18; -fx-background-color: #ddcaa0;"
                     value="肩">
                     <items>
@@ -76,7 +76,7 @@
                         </FXCollections>
                     </items>
                 </ChoiceBox>
-                <ChoiceBox fx:id="arm" onMouseClicked="#armHandle" prefHeight="60.0"
+                <ChoiceBox fx:id="arm" onMouseClicked="#clickedArm" prefHeight="60.0"
                     prefWidth="150.0" style="-fx-font-size: 18; -fx-background-color: #ddcaa0;"
                     value="手臂">
                     <items>
@@ -87,7 +87,7 @@
                         </FXCollections>
                     </items>
                 </ChoiceBox>
-                <ChoiceBox fx:id="core" onMouseClicked="#coreHandle" prefHeight="60.0"
+                <ChoiceBox fx:id="core" onMouseClicked="#clickedCore" prefHeight="60.0"
                     prefWidth="150.0" style="-fx-font-size: 18; -fx-background-color: #ddcaa0;"
                     value="核心">
                     <items>
@@ -96,7 +96,7 @@
                         </FXCollections>
                     </items>
                 </ChoiceBox>
-                <ChoiceBox fx:id="aerobic" onMouseClicked="#aerobicHandle" prefHeight="60.0"
+                <ChoiceBox fx:id="aerobic" onMouseClicked="#clickedAerobic" prefHeight="60.0"
                     prefWidth="150.0" style="-fx-font-size: 18; -fx-background-color: #ddcaa0;"
                     value="有氧">
                     <items>
@@ -132,13 +132,13 @@
                                 <Font size="18.0" />
                             </font>
                         </Label>
-                        <ListView fx:id="machine" onMouseClicked="#clickMachineList"
+                        <ListView fx:id="machine" onMouseClicked="#clickedMachineList"
                             prefHeight="200.0" prefWidth="235.0"
                             style="-fx-background-color: #b3b7a8; -fx-border-color: #b3b7a8;" />
-                        <ListView fx:id="cable" onMouseClicked="#clickCableList" prefHeight="200.0"
+                        <ListView fx:id="cable" onMouseClicked="#clickedCableList" prefHeight="200.0"
                             prefWidth="235.0"
                             style="-fx-background-color: #b3b7a8; -fx-border-color: #b3b7a8;" />
-                        <ListView fx:id="freeWeight" onMouseClicked="#clickFreeWeightList"
+                        <ListView fx:id="freeWeight" onMouseClicked="#clickedFreeWeightList"
                             prefHeight="200.0" prefWidth="235.0"
                             style="-fx-background-color: #b3b7a8; -fx-border-color: #b3b7a8;" />
                         <VBox prefHeight="200.0" prefWidth="200.0">
