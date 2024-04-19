@@ -15,7 +15,7 @@ import javafx.scene.layout.Pane;
 
 import java.io.FileInputStream;
 
-public class LegHandler extends MuscleHandler {
+public class LegHandler extends MusclePartHandler {
     private ChoiceBox<String> leg;
     private ListView<String> machine;
     private ListView<String> cable;

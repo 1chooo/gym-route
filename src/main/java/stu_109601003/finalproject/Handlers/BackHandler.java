@@ -15,7 +15,7 @@ import javafx.scene.layout.Pane;
 
 import java.io.FileInputStream;
 
-public class BackHandler extends MuscleHandler {
+public class BackHandler extends MusclePartHandler {
     private ChoiceBox<String> back;
     private ListView<String> machine;
     private ListView<String> cable;

@@ -14,7 +14,7 @@ import javafx.scene.layout.Pane;
 
 import java.io.FileInputStream;
 
-public class ShoulderHandler extends MuscleHandler {
+public class ShoulderHandler extends MusclePartHandler {
     private ChoiceBox<String> shoulder;
     private ListView<String> machine;
     private ListView<String> cable;

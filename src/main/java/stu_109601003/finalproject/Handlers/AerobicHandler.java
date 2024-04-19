@@ -12,7 +12,7 @@ import javafx.scene.layout.Pane;
 
 import java.io.FileInputStream;
 
-public class AerobicHandler extends MuscleHandler {
+public class AerobicHandler extends MusclePartHandler {
     private ChoiceBox<String> aerobic;
     private ListView<String> machine;
     private ListView<String> cable;

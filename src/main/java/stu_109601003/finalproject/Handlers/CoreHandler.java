@@ -12,7 +12,7 @@ import javafx.scene.layout.Pane;
 
 import java.io.FileInputStream;
 
-public class CoreHandler extends MuscleHandler {
+public class CoreHandler extends MusclePartHandler {
     private ChoiceBox<String> core;
     private ListView<String> machine;
     private ListView<String> cable;

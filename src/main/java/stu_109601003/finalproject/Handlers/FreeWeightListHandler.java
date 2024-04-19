@@ -7,7 +7,7 @@ import javafx.scene.control.ListView;
 import javafx.scene.layout.Pane;
 import java.io.FileInputStream;
 
-public class FreeWeightListHandler extends MuscleHandler {
+public class FreeWeightListHandler extends MusclePartHandler {
 
     private Pane display_muscle;
     private ListView<String> freeWeight;
