@@ -14,16 +14,17 @@ import javafx.scene.layout.Pane;
 
 import java.io.FileInputStream;
 
-public class ArmHandler extends BaseHandler {
-    private ChoiceBox arm;
-    private ListView machine;
-    private ListView cable;
-    private ListView freeWeight;
+public class ArmHandler extends MuscleHandler {
+    private ChoiceBox<String> arm;
+    private ListView<String> machine;
+    private ListView<String> cable;
+    private ListView<String> freeWeight;
     private Pane display_muscle;
 
     public ArmHandler(
-            ChoiceBox arm, Pane display_muscle,
-            ListView machine, ListView cable, ListView freeWeight) {
+            ChoiceBox<String> arm, Pane display_muscle,
+            ListView<String> machine, ListView<String> cable,
+            ListView<String> freeWeight) {
         this.arm = arm;
         this.display_muscle = display_muscle;
         this.machine = machine;
@@ -38,7 +39,8 @@ public class ArmHandler extends BaseHandler {
     public void armHandle() {
         try {
             Image image = new Image(
-                    new FileInputStream("./src/main/resources/stu_109601003/finalproject/imgs/parts/arm.jpg"));
+                    new FileInputStream(
+                            "./src/main/resources/stu_109601003/finalproject/imgs/parts/arm.jpg"));
             ImageView imageView = new ImageView(image);
             imageView.setFitWidth(400);
             imageView.setFitHeight(220);

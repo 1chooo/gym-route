@@ -7,13 +7,13 @@ import javafx.scene.control.ListView;
 import javafx.scene.layout.Pane;
 import java.io.FileInputStream;
 
-public class FreeWeightListHandler extends BaseHandler {
+public class FreeWeightListHandler extends MuscleHandler {
 
     private Pane display_muscle;
-    private ListView freeWeight;
+    private ListView<String> freeWeight;
 
     public FreeWeightListHandler(
-            ListView freeWeight, Pane display_muscle) {
+            ListView<String> freeWeight, Pane display_muscle) {
         this.freeWeight = freeWeight;
         this.display_muscle = display_muscle;
     }

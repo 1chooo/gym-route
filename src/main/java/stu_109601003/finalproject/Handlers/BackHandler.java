@@ -15,16 +15,17 @@ import javafx.scene.layout.Pane;
 
 import java.io.FileInputStream;
 
-public class BackHandler extends BaseHandler {
-    private ChoiceBox back;
-    private ListView machine;
-    private ListView cable;
-    private ListView freeWeight;
+public class BackHandler extends MuscleHandler {
+    private ChoiceBox<String> back;
+    private ListView<String> machine;
+    private ListView<String> cable;
+    private ListView<String> freeWeight;
     private Pane display_muscle;
 
     public BackHandler(
-            ChoiceBox back, Pane display_muscle,
-            ListView machine, ListView cable, ListView freeWeight) {
+            ChoiceBox<String> back, Pane display_muscle,
+            ListView<String> machine, ListView<String> cable,
+            ListView<String> freeWeight) {
         this.back = back;
         this.display_muscle = display_muscle;
         this.machine = machine;

@@ -14,16 +14,17 @@ import javafx.scene.layout.Pane;
 
 import java.io.FileInputStream;
 
-public class ShoulderHandler extends BaseHandler {
-    private ChoiceBox shoulder;
-    private ListView machine;
-    private ListView cable;
-    private ListView freeWeight;
+public class ShoulderHandler extends MuscleHandler {
+    private ChoiceBox<String> shoulder;
+    private ListView<String> machine;
+    private ListView<String> cable;
+    private ListView<String> freeWeight;
     private Pane display_muscle;
 
     public ShoulderHandler(
-            ChoiceBox shoulder, Pane display_muscle,
-            ListView machine, ListView cable, ListView freeWeight) {
+            ChoiceBox<String> shoulder, Pane display_muscle,
+            ListView<String> machine, ListView<String> cable,
+            ListView<String> freeWeight) {
         this.shoulder = shoulder;
         this.display_muscle = display_muscle;
         this.machine = machine;
@@ -38,7 +39,8 @@ public class ShoulderHandler extends BaseHandler {
     public void shoulderHandle() {
         try {
             Image image = new Image(
-                    new FileInputStream("./src/main/resources/stu_109601003/finalproject/imgs/parts/shoulder.jpg"));
+                    new FileInputStream(
+                            "./src/main/resources/stu_109601003/finalproject/imgs/parts/shoulder.jpg"));
             ImageView imageView = new ImageView(image);
             imageView.setFitWidth(400);
             imageView.setFitHeight(490);

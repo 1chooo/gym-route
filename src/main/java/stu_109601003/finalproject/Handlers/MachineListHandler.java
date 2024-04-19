@@ -7,13 +7,13 @@ import javafx.scene.control.ListView;
 import javafx.scene.layout.Pane;
 import java.io.FileInputStream;
 
-public class MachineListHandler extends BaseHandler {
+public class MachineListHandler extends MuscleHandler {
 
     private Pane display_muscle;
-    private ListView machine;
+    private ListView<String> machine;
 
     public MachineListHandler(
-            ListView machine, Pane display_muscle) {
+            ListView<String> machine, Pane display_muscle) {
         this.machine = machine;
         this.display_muscle = display_muscle;
     }
