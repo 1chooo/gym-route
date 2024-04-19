@@ -12,16 +12,17 @@ import javafx.scene.layout.Pane;
 
 import java.io.FileInputStream;
 
-public class AerobicHandler extends BaseHandler {
-    private ChoiceBox aerobic;
-    private ListView machine;
-    private ListView cable;
-    private ListView freeWeight;
+public class AerobicHandler extends MusclePartHandler {
+    private ChoiceBox<String> aerobic;
+    private ListView<String> machine;
+    private ListView<String> cable;
+    private ListView<String> freeWeight;
     private Pane display_muscle;
 
     public AerobicHandler(
-            ChoiceBox aerobic, Pane display_muscle,
-            ListView machine, ListView cable, ListView freeWeight) {
+            ChoiceBox<String> aerobic, Pane display_muscle,
+            ListView<String> machine, ListView<String> cable,
+            ListView<String> freeWeight) {
         this.aerobic = aerobic;
         this.display_muscle = display_muscle;
         this.machine = machine;

@@ -15,18 +15,18 @@ import javafx.scene.layout.Pane;
 
 import java.io.FileInputStream;
 
-public class ChestHandler extends BaseHandler {
+public class ChestHandler extends MusclePartHandler {
 
-    private ChoiceBox chest;
-    private ListView machine;
-    private ListView cable;
-    private ListView freeWeight;
+    private ChoiceBox<String> chest;
+    private ListView<String> machine;
+    private ListView<String> cable;
+    private ListView<String> freeWeight;
     private Pane display_muscle;
 
     public ChestHandler(
-            ChoiceBox chest, Pane display_muscle,
-            ListView machine, ListView cable,
-            ListView freeWeight) {
+            ChoiceBox<String> chest, Pane display_muscle,
+            ListView<String> machine, ListView<String> cable,
+            ListView<String> freeWeight) {
         this.chest = chest;
         this.display_muscle = display_muscle;
         this.cable = cable;

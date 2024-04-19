@@ -7,13 +7,13 @@ import javafx.scene.control.ListView;
 import javafx.scene.layout.Pane;
 import java.io.FileInputStream;
 
-public class CableListHandler extends BaseHandler {
+public class CableListHandler extends MusclePartHandler {
 
-    private ListView cable;
+    private ListView<String> cable;
     private Pane display_muscle;
 
     public CableListHandler(
-            ListView cable, Pane display_muscle) {
+            ListView<String> cable, Pane display_muscle) {
         this.cable = cable;
         this.display_muscle = display_muscle;
     }

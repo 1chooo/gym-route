@@ -27,27 +27,27 @@ public class HomeController {
     @FXML
     Button back_b;
     @FXML
-    ChoiceBox chest;
+    ChoiceBox<String> chest;
     @FXML
-    ChoiceBox leg;
+    ChoiceBox<String> leg;
     @FXML
-    ChoiceBox back;
+    ChoiceBox<String> back;
     @FXML
-    ChoiceBox shoulder;
+    ChoiceBox<String> shoulder;
     @FXML
-    ChoiceBox arm;
+    ChoiceBox<String> arm;
     @FXML
-    ChoiceBox core;
+    ChoiceBox<String> core;
     @FXML
-    ChoiceBox aerobic;
+    ChoiceBox<String> aerobic;
     @FXML
     Pane display_muscle;
     @FXML
-    ListView machine;
+    ListView<String> machine;
     @FXML
-    ListView cable;
+    ListView<String> cable;
     @FXML
-    ListView freeWeight;
+    ListView<String> freeWeight;
     @FXML
     Label sets_times;
     @FXML

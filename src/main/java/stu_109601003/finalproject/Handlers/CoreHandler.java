@@ -12,16 +12,16 @@ import javafx.scene.layout.Pane;
 
 import java.io.FileInputStream;
 
-public class CoreHandler extends BaseHandler {
-    private ChoiceBox core;
-    private ListView machine;
-    private ListView cable;
-    private ListView freeWeight;
+public class CoreHandler extends MusclePartHandler {
+    private ChoiceBox<String> core;
+    private ListView<String> machine;
+    private ListView<String> cable;
+    private ListView<String> freeWeight;
     private Pane display_muscle;
 
     public CoreHandler(
-            ChoiceBox core, Pane display_muscle,
-            ListView machine, ListView cable, ListView freeWeight) {
+            ChoiceBox<String> core, Pane display_muscle,
+            ListView<String> machine, ListView<String> cable, ListView<String> freeWeight) {
         this.core = core;
         this.display_muscle = display_muscle;
         this.machine = machine;

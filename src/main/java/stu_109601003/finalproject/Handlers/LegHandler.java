@@ -15,21 +15,22 @@ import javafx.scene.layout.Pane;
 
 import java.io.FileInputStream;
 
-public class LegHandler extends BaseHandler {
-    private ChoiceBox leg;
-    private ListView machine;
-    private ListView cable;
-    private ListView freeWeight;
+public class LegHandler extends MusclePartHandler {
+    private ChoiceBox<String> leg;
+    private ListView<String> machine;
+    private ListView<String> cable;
+    private ListView<String> freeWeight;
     private Pane display_muscle;
 
     public LegHandler(
-            ChoiceBox leg, Pane display_muscle,
-            ListView machine, ListView cable, ListView freeWeight) {
-                this.leg = leg;
-                this.display_muscle = display_muscle;
-                this.machine = machine;
-                this.cable = cable;
-                this.freeWeight = freeWeight;
+            ChoiceBox<String> leg, Pane display_muscle,
+            ListView<String> machine, ListView<String> cable,
+            ListView<String> freeWeight) {
+        this.leg = leg;
+        this.display_muscle = display_muscle;
+        this.machine = machine;
+        this.cable = cable;
+        this.freeWeight = freeWeight;
     }
 
     @Override
@@ -39,7 +40,8 @@ public class LegHandler extends BaseHandler {
     public void legHandle() {
         try {
             Image image = new Image(
-                    new FileInputStream("./src/main/resources/stu_109601003/finalproject/imgs/parts/leg.jpg"));
+                    new FileInputStream(
+                            "./src/main/resources/stu_109601003/finalproject/imgs/parts/leg.jpg"));
             ImageView imageView = new ImageView(image);
             imageView.setFitWidth(400);
             imageView.setFitHeight(219);
