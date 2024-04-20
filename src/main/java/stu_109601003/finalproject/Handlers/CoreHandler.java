@@ -44,7 +44,7 @@ public class CoreHandler extends MusclePartHandler {
                 core, CORE.CORE,
                 coreEquipment, machine, cable, freeWeight);
 
-        if (core.getValue().toString().equals(CORE.CORE)) {
+        if (core.getValue().toString().equals(CORE.CORE.getName())) {
             equipmentHandler.setEquipment(
                     coreEquipment, machine, cable, freeWeight);
         } else {

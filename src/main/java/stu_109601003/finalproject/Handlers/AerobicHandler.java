@@ -45,7 +45,7 @@ public class AerobicHandler extends MusclePartHandler {
                 aerobic, AEROBIC.AEROBIC,
                 aerobicEquipment, machine, cable, freeWeight);
 
-        if (aerobic.getValue().toString().equals(AEROBIC.AEROBIC)) {
+        if (aerobic.getValue().toString().equals(AEROBIC.AEROBIC.getName())) {
             equipmentHandler.setEquipment(
                     aerobicEquipment, machine, cable, freeWeight);
         } else {
