@@ -17,8 +17,10 @@ public class AerobicHandler extends MusclePartHandler {
     private Pane display_muscle;
 
     private String imagePath = "./src/main/resources/stu_109601003/finalproject/imgs/parts/aero.jfif";
+    
     private AerobicEquipments aerobicEquipments = new AerobicEquipments();
     private BodyPartEquipment aerobicEquipment = aerobicEquipments.getAerobicEquipment();
+
     private EquipmentHandler equipmentHandler = new EquipmentHandler();
 
     public AerobicHandler(

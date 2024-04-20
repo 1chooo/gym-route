@@ -24,7 +24,10 @@ public class ArmHandler extends MusclePartHandler {
     private BodyPartEquipment armEquipment = armEquipments.getArmEquipment();
     private BodyPartEquipment bicepsEquipment = armEquipments.getBicepsEquipment();
     private BodyPartEquipment tricepsEquipment = armEquipments.getTricepsEquipment();
+    
     private EquipmentHandler equipmentHandler = new EquipmentHandler();
+
+    private ARM[] arms = { ARM.ARM, ARM.BICEPS, ARM.TRICEPS };
 
     public ArmHandler(
             ChoiceBox<String> arm, Pane display_muscle,
@@ -48,7 +51,6 @@ public class ArmHandler extends MusclePartHandler {
                 arm, ARM.ARM, armEquipment,
                 machine, cable, freeWeight);
 
-        ARM[] arms = { ARM.ARM, ARM.BICEPS, ARM.TRICEPS };
         arm.getSelectionModel().selectedIndexProperty().addListener(new ChangeListener<Number>() {
             @Override
             public void changed(

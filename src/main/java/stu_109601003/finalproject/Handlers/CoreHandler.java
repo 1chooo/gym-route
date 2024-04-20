@@ -17,8 +17,10 @@ public class CoreHandler extends MusclePartHandler {
     private Pane display_muscle;
 
     private String imagePath = "./src/main/resources/stu_109601003/finalproject/imgs/parts/core.jpg";
+
     private CoreEquipments coreEquipments = new CoreEquipments();
     private BodyPartEquipment coreEquipment = coreEquipments.getCoreEquipment();
+    
     private EquipmentHandler equipmentHandler = new EquipmentHandler();
 
     public CoreHandler(
