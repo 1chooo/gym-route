@@ -7,6 +7,8 @@ import javafx.scene.input.MouseEvent;
 import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
 import javafx.scene.layout.Pane;
+import stu_109601003.finalproject.Equipments.BodyPartEquipment;
+import stu_109601003.finalproject.Parts.ARM;
 
 public class ArmHandler extends MusclePartHandler {
     private ChoiceBox<String> arm;
@@ -63,18 +65,18 @@ public class ArmHandler extends MusclePartHandler {
                 display_muscle);
 
         // updateEquipment(ARMPART.ARM, armEquipment, machine, cable, freeWeight);
-        equipmentHandler.updateEquipment(arm, ARMPART.ARM, armEquipment, machine, cable, freeWeight);
+        equipmentHandler.updateEquipment(arm, ARM.ARM, armEquipment, machine, cable, freeWeight);
 
-        ARMPART[] arm_list = { ARMPART.ARM, ARMPART.BICEPS, ARMPART.TRICEPS };
+        ARM[] arm_list = { ARM.ARM, ARM.BICEPS, ARM.TRICEPS };
         arm.getSelectionModel().selectedIndexProperty().addListener(new ChangeListener<Number>() {
             @Override
             public void changed(ObservableValue<? extends Number> observableValue, Number number,
                     Number t1) {
-                if (arm_list[t1.intValue()] == ARMPART.ARM) {
+                if (arm_list[t1.intValue()] == ARM.ARM) {
                     equipmentHandler.setEquipment(armEquipment, machine, cable, freeWeight);
-                } else if (arm_list[t1.intValue()] == ARMPART.BICEPS) {
+                } else if (arm_list[t1.intValue()] == ARM.BICEPS) {
                     equipmentHandler.setEquipment(bicepsEquipment, machine, cable, freeWeight);
-                } else if (arm_list[t1.intValue()] == ARMPART.TRICEPS) {
+                } else if (arm_list[t1.intValue()] == ARM.TRICEPS) {
                     equipmentHandler.setEquipment(tricepsEquipment, machine, cable, freeWeight);
                 }
             }

@@ -1,4 +1,4 @@
-package stu_109601003.finalproject.Handlers;
+package stu_109601003.finalproject.Equipments;
 
 import javafx.collections.ObservableList;
 import javafx.collections.FXCollections;
