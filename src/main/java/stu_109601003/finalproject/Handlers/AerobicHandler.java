@@ -1,16 +1,13 @@
 package stu_109601003.finalproject.Handlers;
 
-import javafx.collections.FXCollections;
-import javafx.collections.ObservableList;
 import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.ListView;
 import javafx.scene.input.MouseEvent;
-
-import javafx.scene.image.Image;
-import javafx.scene.image.ImageView;
 import javafx.scene.layout.Pane;
 
-import java.io.FileInputStream;
+import stu_109601003.finalproject.Equipments.AerobicEquipments;
+import stu_109601003.finalproject.Equipments.BodyPartEquipment;
+import stu_109601003.finalproject.Parts.AEROBIC;
 
 public class AerobicHandler extends MusclePartHandler {
     private ChoiceBox<String> aerobic;
@@ -18,6 +15,11 @@ public class AerobicHandler extends MusclePartHandler {
     private ListView<String> cable;
     private ListView<String> freeWeight;
     private Pane display_muscle;
+
+    private String imagePath = "./src/main/resources/stu_109601003/finalproject/imgs/parts/aero.jfif";
+    private AerobicEquipments aerobicEquipments = new AerobicEquipments();
+    private BodyPartEquipment aerobicEquipment = aerobicEquipments.getAerobicEquipment();
+    private EquipmentHandler equipmentHandler = new EquipmentHandler();
 
     public AerobicHandler(
             ChoiceBox<String> aerobic, Pane display_muscle,
@@ -35,27 +37,15 @@ public class AerobicHandler extends MusclePartHandler {
     }
 
     public void aerobicHandle() {
-        try {
-            Image image = new Image(
-                    new FileInputStream("./src/main/resources/stu_109601003/finalproject/imgs/parts/aero.jfif"));
-            ImageView imageView = new ImageView(image);
-            imageView.setFitWidth(400);
-            imageView.setFitHeight(300);
-            imageView.setY(50);
-            display_muscle.getChildren().clear();
-            display_muscle.getChildren().addAll(imageView);
-        } catch (Exception e) {
-        }
-        if (aerobic.getValue().toString().equals("有氧")) {
-            ObservableList<String> action_machine = FXCollections.observableArrayList("跑步機", "橢圓機",
-                    "樓梯機", "踏步車",
-                    "臥式健身車", "立式健身車",
-                    "划船機");
-            machine.setItems(action_machine);
-            ObservableList<String> action_cable = FXCollections.observableArrayList();
-            cable.setItems(action_cable);
-            ObservableList<String> action_freeweight = FXCollections.observableArrayList();
-            freeWeight.setItems(action_freeweight);
+        displayArmImage(imagePath, display_muscle);
+
+        equipmentHandler.updateEquipment(
+                aerobic, AEROBIC.AEROBIC,
+                aerobicEquipment, machine, cable, freeWeight);
+
+        if (aerobic.getValue().toString().equals(AEROBIC.AEROBIC)) {
+            equipmentHandler.setEquipment(
+                    aerobicEquipment, machine, cable, freeWeight);
         } else {
         }
     }

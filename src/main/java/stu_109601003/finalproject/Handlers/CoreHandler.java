@@ -1,16 +1,13 @@
 package stu_109601003.finalproject.Handlers;
 
-import javafx.collections.FXCollections;
-import javafx.collections.ObservableList;
 import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.ListView;
 import javafx.scene.input.MouseEvent;
-
-import javafx.scene.image.Image;
-import javafx.scene.image.ImageView;
 import javafx.scene.layout.Pane;
 
-import java.io.FileInputStream;
+import stu_109601003.finalproject.Equipments.BodyPartEquipment;
+import stu_109601003.finalproject.Parts.CORE;
+import stu_109601003.finalproject.Equipments.CoreEquipments;
 
 public class CoreHandler extends MusclePartHandler {
     private ChoiceBox<String> core;
@@ -18,6 +15,11 @@ public class CoreHandler extends MusclePartHandler {
     private ListView<String> cable;
     private ListView<String> freeWeight;
     private Pane display_muscle;
+
+    private String imagePath = "./src/main/resources/stu_109601003/finalproject/imgs/parts/core.jpg";
+    private CoreEquipments coreEquipments = new CoreEquipments();
+    private BodyPartEquipment coreEquipment = coreEquipments.getCoreEquipment();
+    private EquipmentHandler equipmentHandler = new EquipmentHandler();
 
     public CoreHandler(
             ChoiceBox<String> core, Pane display_muscle,
@@ -34,25 +36,15 @@ public class CoreHandler extends MusclePartHandler {
     }
 
     public void coreHandle() {
-        try {
-            Image image = new Image(new FileInputStream(
-                    "./src/main/resources/stu_109601003/finalproject/imgs/parts/core.jpg"));
-            ImageView imageView = new ImageView(image);
-            imageView.setFitWidth(400);
-            imageView.setFitHeight(200);
-            imageView.setY(50);
-            display_muscle.getChildren().clear();
-            display_muscle.getChildren().addAll(imageView);
-        } catch (Exception e) {
-        }
-        if (core.getValue().toString().equals("核心")) {
-            ObservableList<String> action_machine = FXCollections.observableArrayList(
-                    "機械腹部訓練", "機械腹部旋轉");
-            machine.setItems(action_machine);
-            ObservableList<String> action_cable = FXCollections.observableArrayList();
-            cable.setItems(action_cable);
-            ObservableList<String> action_freeweight = FXCollections.observableArrayList();
-            freeWeight.setItems(action_freeweight);
+        displayArmImage(imagePath, display_muscle);
+
+        equipmentHandler.updateEquipment(
+                core, CORE.CORE,
+                coreEquipment, machine, cable, freeWeight);
+
+        if (core.getValue().toString().equals(CORE.CORE)) {
+            equipmentHandler.setEquipment(
+                    coreEquipment, machine, cable, freeWeight);
         } else {
         }
     }

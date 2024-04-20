@@ -3,20 +3,22 @@ package stu_109601003.finalproject.Equipments;
 import javafx.collections.ObservableList;
 import javafx.collections.FXCollections;
 
+import stu_109601003.finalproject.Parts.MusclePart;
+
 public class BodyPartEquipment {
-    private String bodyPart;
+    private MusclePart bodyPart;
     private ObservableList<String> mechanicalEquipment;
     private ObservableList<String> cableEquipment;
     private ObservableList<String> freeWeightEquipment;
 
-    public BodyPartEquipment(String bodyPart, String[] mechanical, String[] cable, String[] freeWeight) {
+    public BodyPartEquipment(MusclePart bodyPart, String[] mechanical, String[] cable, String[] freeWeight) {
         this.bodyPart = bodyPart;
         this.mechanicalEquipment = FXCollections.observableArrayList(mechanical);
         this.cableEquipment = FXCollections.observableArrayList(cable);
         this.freeWeightEquipment = FXCollections.observableArrayList(freeWeight);
     }
 
-    public String getBodyPart() {
+    public MusclePart getBodyPart() {
         return bodyPart;
     }
 
