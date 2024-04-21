@@ -142,11 +142,11 @@ public class HomeController {
         freeWeightListHandler.handleFreeWeightSelection(event);
     }
 
-    public void onPreviousPageClicked() throws IOException {
+    public void clickedPreviousPage() throws IOException {
         SceneController.switchScene(PAGE.LOGIN);
     }
 
-    public void onNextPageClicked() throws IOException {
+    public void clickedNextPage() throws IOException {
         SceneController.switchScene(PAGE.CURRICULUM);
     }
 }

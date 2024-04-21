@@ -18,11 +18,10 @@ public class LoginController {
   private ImageView imageView;
   @FXML
   private Button exit;
+  private String imagePath = "./src/main/resources/stu_109601003/finalproject/imgs/login.png";
 
   @FXML
-  public void initialize() {
-    // print current path
-    String imagePath = "./src/main/resources/stu_109601003/finalproject/imgs/login.png";
+  private void initialize() {
     File file = new File(imagePath);
     Image image = new Image(file.toURI().toString());
     imageView.setImage(image);

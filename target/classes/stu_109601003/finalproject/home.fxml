@@ -22,7 +22,7 @@
         <HBox alignment="CENTER" prefHeight="80.0" prefWidth="1180.0" spacing="5.0">
             <children>
                 <Button fx:id="back_b" mnemonicParsing="false"
-                    onMouseClicked="#onPreviousPageClicked" prefHeight="60.0" prefWidth="150.0"
+                    onMouseClicked="#clickedPreviousPage" prefHeight="60.0" prefWidth="150.0"
                     style="-fx-background-color: #b7c7d6;" text="返回登入畫面" textAlignment="CENTER">
                     <font>
                         <Font size="18.0" />
@@ -235,7 +235,7 @@
                             </children>
                         </VBox>
                         <Button fx:id="set_table" mnemonicParsing="false"
-                            onMouseClicked="#onNextPageClicked" prefHeight="200.0" prefWidth="200.0"
+                            onMouseClicked="#clickedNextPage" prefHeight="200.0" prefWidth="200.0"
                             style="-fx-background-color: #b7c7d6;" text="開始安排課表吧！">
                             <font>
                                 <Font size="18.0" />

@@ -3,10 +3,13 @@ package stu_109601003.finalproject.Handlers;
 import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.ListView;
 import javafx.scene.input.MouseEvent;
-
 import javafx.beans.value.ChangeListener;
 import javafx.beans.value.ObservableValue;
 import javafx.scene.layout.Pane;
+
+import stu_109601003.finalproject.Equipments.BodyPartEquipment;
+import stu_109601003.finalproject.Parts.ARM;
+import stu_109601003.finalproject.Equipments.ArmEquipments;
 
 public class ArmHandler extends MusclePartHandler {
     private ChoiceBox<String> arm;
@@ -15,32 +18,16 @@ public class ArmHandler extends MusclePartHandler {
     private ListView<String> freeWeight;
     private Pane display_muscle;
 
-    private String[] armMechanical = { "機械二頭彎曲", "機械三頭伸展" };
-    private String[] armCable = { "cable二頭彎曲", "cable三頭伸展" };
-    private String[] armFreeWeight = {
-            "啞鈴二頭彎曲", "啞鈴三頭伸展", "W槓二頭彎曲",
-            "W槓三頭伸展", "槓鈴二頭彎曲", "槓鈴三頭伸展",
-            "槓鈴窄握臥推" };
-    private BodyPartEquipment armEquipment = new BodyPartEquipment(
-            "手臂", armMechanical, armCable, armFreeWeight);
+    private String imagePath = "./src/main/resources/stu_109601003/finalproject/imgs/parts/arm.jpg";
 
-    private String[] bicepsMechanical = { "機械二頭彎曲" };
-    private String[] bicepsCable = { "cable二頭彎曲" };
-    private String[] bicepsFreeWeight = {
-            "啞鈴二頭彎曲", "W槓二頭彎曲", "槓鈴二頭彎曲" };
-    private BodyPartEquipment bicepsEquipment = new BodyPartEquipment(
-            "肱二頭", bicepsMechanical, bicepsCable,
-            bicepsFreeWeight);
-
-    private String[] tricepsMechanical = { "機械三頭伸展" };
-    private String[] tricepsCable = { "cable三頭伸展" };
-    private String[] tricepsFreeWeight = {
-            "啞鈴三頭伸展", "W槓三頭伸展", "槓鈴三頭伸展", "槓鈴窄握臥推" };
-    private BodyPartEquipment tricepsEquipment = new BodyPartEquipment(
-            "肱三頭", tricepsMechanical, tricepsCable,
-            tricepsFreeWeight);
+    private ArmEquipments armEquipments = new ArmEquipments();
+    private BodyPartEquipment armEquipment = armEquipments.getArmEquipment();
+    private BodyPartEquipment bicepsEquipment = armEquipments.getBicepsEquipment();
+    private BodyPartEquipment tricepsEquipment = armEquipments.getTricepsEquipment();
     
     private EquipmentHandler equipmentHandler = new EquipmentHandler();
+
+    private ARM[] arms = { ARM.ARM, ARM.BICEPS, ARM.TRICEPS };
 
     public ArmHandler(
             ChoiceBox<String> arm, Pane display_muscle,
@@ -58,24 +45,27 @@ public class ArmHandler extends MusclePartHandler {
     }
 
     public void armHandle() {
-        displayArmImage(
-                "./src/main/resources/stu_109601003/finalproject/imgs/parts/arm.jpg",
-                display_muscle);
+        displayArmImage(imagePath, display_muscle);
 
-        // updateEquipment(ARMPART.ARM, armEquipment, machine, cable, freeWeight);
-        equipmentHandler.updateEquipment(arm, ARMPART.ARM, armEquipment, machine, cable, freeWeight);
+        equipmentHandler.updateEquipment(
+                arm, ARM.ARM, armEquipment,
+                machine, cable, freeWeight);
 
-        ARMPART[] arm_list = { ARMPART.ARM, ARMPART.BICEPS, ARMPART.TRICEPS };
         arm.getSelectionModel().selectedIndexProperty().addListener(new ChangeListener<Number>() {
             @Override
-            public void changed(ObservableValue<? extends Number> observableValue, Number number,
-                    Number t1) {
-                if (arm_list[t1.intValue()] == ARMPART.ARM) {
-                    equipmentHandler.setEquipment(armEquipment, machine, cable, freeWeight);
-                } else if (arm_list[t1.intValue()] == ARMPART.BICEPS) {
-                    equipmentHandler.setEquipment(bicepsEquipment, machine, cable, freeWeight);
-                } else if (arm_list[t1.intValue()] == ARMPART.TRICEPS) {
-                    equipmentHandler.setEquipment(tricepsEquipment, machine, cable, freeWeight);
+            public void changed(
+                    ObservableValue<? extends Number> observableValue,
+                    Number number, Number t1) {
+                if (arms[t1.intValue()] == ARM.ARM) {
+                    equipmentHandler.setEquipment(
+                            armEquipment, machine, cable, freeWeight);
+                } else if (arms[t1.intValue()] == ARM.BICEPS) {
+                    equipmentHandler.setEquipment(
+                            bicepsEquipment, machine, cable, freeWeight);
+                } else if (arms[t1.intValue()] == ARM.TRICEPS) {
+                    equipmentHandler.setEquipment(
+                            tricepsEquipment, machine, cable, freeWeight);
+                } else {
                 }
             }
         });
