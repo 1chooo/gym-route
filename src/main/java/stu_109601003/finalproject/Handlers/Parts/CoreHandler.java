@@ -1,4 +1,4 @@
-package stu_109601003.finalproject.Handlers;
+package stu_109601003.finalproject.Handlers.Parts;
 
 import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.ListView;
@@ -8,6 +8,8 @@ import javafx.scene.layout.Pane;
 import stu_109601003.finalproject.Equipments.BodyPartEquipment;
 import stu_109601003.finalproject.Parts.CORE;
 import stu_109601003.finalproject.Equipments.CoreEquipments;
+import stu_109601003.finalproject.Handlers.EquipmentHandler;
+import stu_109601003.finalproject.Handlers.MusclePartHandler;
 
 public class CoreHandler extends MusclePartHandler {
     private ChoiceBox<String> core;

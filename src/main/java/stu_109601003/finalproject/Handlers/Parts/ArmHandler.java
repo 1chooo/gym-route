@@ -1,4 +1,4 @@
-package stu_109601003.finalproject.Handlers;
+package stu_109601003.finalproject.Handlers.Parts;
 
 import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.ListView;
@@ -8,6 +8,8 @@ import javafx.beans.value.ObservableValue;
 import javafx.scene.layout.Pane;
 
 import stu_109601003.finalproject.Equipments.BodyPartEquipment;
+import stu_109601003.finalproject.Handlers.EquipmentHandler;
+import stu_109601003.finalproject.Handlers.MusclePartHandler;
 import stu_109601003.finalproject.Parts.ARM;
 import stu_109601003.finalproject.Equipments.ArmEquipments;
 

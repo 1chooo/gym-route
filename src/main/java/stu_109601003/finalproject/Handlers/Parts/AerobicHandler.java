@@ -1,4 +1,4 @@
-package stu_109601003.finalproject.Handlers;
+package stu_109601003.finalproject.Handlers.Parts;
 
 import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.ListView;
@@ -7,6 +7,8 @@ import javafx.scene.layout.Pane;
 
 import stu_109601003.finalproject.Equipments.AerobicEquipments;
 import stu_109601003.finalproject.Equipments.BodyPartEquipment;
+import stu_109601003.finalproject.Handlers.EquipmentHandler;
+import stu_109601003.finalproject.Handlers.MusclePartHandler;
 import stu_109601003.finalproject.Parts.AEROBIC;
 
 public class AerobicHandler extends MusclePartHandler {

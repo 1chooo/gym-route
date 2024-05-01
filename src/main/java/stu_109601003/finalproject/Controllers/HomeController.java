@@ -8,14 +8,15 @@ import javafx.scene.control.ListView;
 import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.Pane;
 import javafx.scene.layout.VBox;
-import stu_109601003.finalproject.Handlers.ChestHandler;
-import stu_109601003.finalproject.Handlers.LegHandler;
+
 import stu_109601003.finalproject.Handlers.MachineListHandler;
-import stu_109601003.finalproject.Handlers.BackHandler;
-import stu_109601003.finalproject.Handlers.ShoulderHandler;
-import stu_109601003.finalproject.Handlers.ArmHandler;
-import stu_109601003.finalproject.Handlers.CoreHandler;
-import stu_109601003.finalproject.Handlers.AerobicHandler;
+import stu_109601003.finalproject.Handlers.Parts.AerobicHandler;
+import stu_109601003.finalproject.Handlers.Parts.ArmHandler;
+import stu_109601003.finalproject.Handlers.Parts.BackHandler;
+import stu_109601003.finalproject.Handlers.Parts.ChestHandler;
+import stu_109601003.finalproject.Handlers.Parts.CoreHandler;
+import stu_109601003.finalproject.Handlers.Parts.LegHandler;
+import stu_109601003.finalproject.Handlers.Parts.ShoulderHandler;
 import stu_109601003.finalproject.Handlers.CableListHandler;
 import stu_109601003.finalproject.Handlers.FreeWeightListHandler;
 

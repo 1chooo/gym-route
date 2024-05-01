@@ -1,4 +1,4 @@
-package stu_109601003.finalproject.Handlers;
+package stu_109601003.finalproject.Handlers.Parts;
 
 import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.ListView;
@@ -10,6 +10,8 @@ import javafx.scene.layout.Pane;
 import stu_109601003.finalproject.Parts.BACK;
 import stu_109601003.finalproject.Equipments.BackEquipments;
 import stu_109601003.finalproject.Equipments.BodyPartEquipment;
+import stu_109601003.finalproject.Handlers.EquipmentHandler;
+import stu_109601003.finalproject.Handlers.MusclePartHandler;
 
 public class BackHandler extends MusclePartHandler {
     private ChoiceBox<String> back;

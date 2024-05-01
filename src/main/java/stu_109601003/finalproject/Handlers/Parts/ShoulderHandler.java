@@ -1,4 +1,4 @@
-package stu_109601003.finalproject.Handlers;
+package stu_109601003.finalproject.Handlers.Parts;
 
 import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.ListView;
@@ -9,6 +9,8 @@ import javafx.scene.layout.Pane;
 
 import stu_109601003.finalproject.Parts.SHOULDER;
 import stu_109601003.finalproject.Equipments.ShoulderEquipments;
+import stu_109601003.finalproject.Handlers.EquipmentHandler;
+import stu_109601003.finalproject.Handlers.MusclePartHandler;
 import stu_109601003.finalproject.Equipments.BodyPartEquipment;
 
 public class ShoulderHandler extends MusclePartHandler {

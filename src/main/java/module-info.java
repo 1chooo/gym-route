@@ -12,4 +12,8 @@ module stu_109601003.finalproject {
 
   exports stu_109601003.finalproject;
   exports stu_109601003.finalproject.Controllers;
+  exports stu_109601003.finalproject.Handlers;
+  exports stu_109601003.finalproject.Handlers.Parts;
+  exports stu_109601003.finalproject.Equipments;
+  exports stu_109601003.finalproject.Parts;
 }
