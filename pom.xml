@@ -81,7 +81,7 @@
                         <id>default-cli</id>
                         <configuration>
                             <mainClass>
-                                stu_109601003.finalproject/stu_109601003.finalproject.HelloApplication
+                                stu_109601003.final_project/stu_109601003.final_project.HelloApplication
                             </mainClass>
                             <launcher>app</launcher>
                             <jlinkZipName>app</jlinkZipName>

@@ -1,4 +1,4 @@
-module stu_109601003.finalproject {
+module stu_109601003.final_project {
   requires javafx.controls;
   requires javafx.fxml;
 
@@ -7,13 +7,13 @@ module stu_109601003.finalproject {
   requires org.kordamp.bootstrapfx.core;
   requires transitive javafx.graphics;
 
-  opens stu_109601003.finalproject to javafx.fxml;
-  opens stu_109601003.finalproject.controllers to javafx.fxml;
+  opens stu_109601003.final_project to javafx.fxml;
+  opens stu_109601003.final_project.controllers to javafx.fxml;
 
-  exports stu_109601003.finalproject;
-  exports stu_109601003.finalproject.controllers;
-  exports stu_109601003.finalproject.handlers;
-  exports stu_109601003.finalproject.handlers.Parts;
-  exports stu_109601003.finalproject.equipments;
-  exports stu_109601003.finalproject.parts;
+  exports stu_109601003.final_project;
+  exports stu_109601003.final_project.controllers;
+  exports stu_109601003.final_project.handlers;
+  exports stu_109601003.final_project.handlers.Parts;
+  exports stu_109601003.final_project.equipments;
+  exports stu_109601003.final_project.parts;
 }
