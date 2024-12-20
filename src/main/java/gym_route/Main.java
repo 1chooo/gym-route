@@ -1,9 +1,19 @@
 package gym_route;
 
-import java.io.IOException;
+import gym_route.controllers.PAGE;
+import gym_route.controllers.SceneController;
+import javafx.application.Application;
+import javafx.stage.Stage;
 
-public class Main {
-    public static void main(String[] args) throws IOException {
-        App.main(args);
+public class Main extends Application {
+
+    @Override
+    public void start(Stage primaryStage) {
+        SceneController.setStage(primaryStage);
+        SceneController.switchScene(PAGE.LOGIN);
+    }
+
+    public static void main(String[] args) {
+        launch();
     }
 }

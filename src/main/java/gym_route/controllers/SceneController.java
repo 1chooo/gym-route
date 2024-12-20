@@ -2,7 +2,7 @@ package gym_route.controllers;
 
 import java.io.IOException;
 
-import gym_route.App;
+import gym_route.Main;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
@@ -18,7 +18,7 @@ public class SceneController {
 
     public static void switchScene(PAGE fxml) {
         try {
-            Parent root = FXMLLoader.load(App.class.getResource(fxml.getFileName() + ".fxml"));
+            Parent root = FXMLLoader.load(Main.class.getResource(fxml.getFileName() + ".fxml"));
             stage.setScene(new Scene(root, 1200, 675.0));
             stage.show();
         } catch (IOException e) {
