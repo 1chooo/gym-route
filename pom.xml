@@ -4,11 +4,10 @@
     xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 https://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>stu_109601003</groupId>
+    <groupId>com.example</groupId>
     <artifactId>FinalProject</artifactId>
     <version>1.0-SNAPSHOT</version>
-    <name>FinalProject</name>
-
+    <name>Gym Route</name>
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <junit.version>5.8.1</junit.version>
@@ -77,18 +76,11 @@
                 <version>0.0.8</version>
                 <executions>
                     <execution>
-                        <!-- Default configuration for running with: mvn clean javafx:run -->
                         <id>default-cli</id>
                         <configuration>
                             <mainClass>
-                                stu_109601003.final_project/stu_109601003.final_project.HelloApplication
+                                final_project/final_project.HelloApplication
                             </mainClass>
-                            <launcher>app</launcher>
-                            <jlinkZipName>app</jlinkZipName>
-                            <jlinkImageName>app</jlinkImageName>
-                            <noManPages>true</noManPages>
-                            <stripDebug>true</stripDebug>
-                            <noHeaderFiles>true</noHeaderFiles>
                         </configuration>
                     </execution>
                 </executions>
