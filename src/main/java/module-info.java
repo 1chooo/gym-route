@@ -1,4 +1,4 @@
-module final_project {
+module gym_route {
   requires javafx.controls;
   requires javafx.fxml;
 
@@ -7,13 +7,13 @@ module final_project {
   requires org.kordamp.bootstrapfx.core;
   requires transitive javafx.graphics;
 
-  opens final_project to javafx.fxml;
-  opens final_project.controllers to javafx.fxml;
+  opens gym_route to javafx.fxml;
+  opens gym_route.controllers to javafx.fxml;
 
-  exports final_project;
-  exports final_project.controllers;
-  exports final_project.handlers;
-  exports final_project.handlers.Parts;
-  exports final_project.equipments;
-  exports final_project.parts;
+  exports gym_route;
+  exports gym_route.controllers;
+  exports gym_route.handlers;
+  exports gym_route.handlers.Parts;
+  exports gym_route.equipments;
+  exports gym_route.parts;
 }

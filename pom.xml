@@ -5,9 +5,10 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>com.example</groupId>
-    <artifactId>FinalProject</artifactId>
+    <artifactId>GymRoute</artifactId>
     <version>1.0-SNAPSHOT</version>
     <name>Gym Route</name>
+    
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <junit.version>5.8.1</junit.version>
@@ -79,7 +80,7 @@
                         <id>default-cli</id>
                         <configuration>
                             <mainClass>
-                                final_project/final_project.HelloApplication
+                                gym_route/gym_route.HelloApplication
                             </mainClass>
                         </configuration>
                     </execution>
