@@ -73,7 +73,7 @@ public class LegEquipments {
     private String[] calfMechanical = {
             "機械小腿伸展" };
     private String[] calfCable = {
-    };
+            "cable後踢", "cable側踢", "cable腿內收" };
     private String[] calfFreeWeight = {
             "啞鈴提腫" };
     private BodyPartEquipment calfEquipment = new BodyPartEquipment(

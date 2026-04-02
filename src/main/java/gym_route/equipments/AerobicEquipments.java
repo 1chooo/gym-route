@@ -4,7 +4,7 @@ import gym_route.parts.AEROBIC;
 
 public class AerobicEquipments {
     private String[] aerobicMechanical = {
-            "樓梯機" , "踏步車", "臥式健身車", "立式健身車",
+            "跑步機", "橢圓機", "樓梯機", "踏步車", "臥式健身車", "立式健身車",
             "划船機" };
     private String[] aerobicCable = {};
     private String[] aerobicFreeWeight = {};

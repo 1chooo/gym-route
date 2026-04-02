@@ -1,34 +1,33 @@
 package gym_route.handlers.Parts;
 
+import gym_route.equipments.BodyPartEquipment;
+import gym_route.equipments.ChestEquipments;
+import gym_route.handlers.MusclePartHandler;
+import gym_route.handlers.PartEquipmentBinder;
+import gym_route.parts.CHEST;
 import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.ListView;
 import javafx.scene.input.MouseEvent;
-import gym_route.equipments.BodyPartEquipment;
-import gym_route.equipments.ChestEquipments;
-import gym_route.handlers.EquipmentHandler;
-import gym_route.handlers.MusclePartHandler;
-import gym_route.parts.CHEST;
-import javafx.beans.value.ChangeListener;
-import javafx.beans.value.ObservableValue;
 import javafx.scene.layout.Pane;
 
 public class ChestHandler extends MusclePartHandler {
-    private ChoiceBox<String> chest;
-    private ListView<String> machine;
-    private ListView<String> cable;
-    private ListView<String> freeWeight;
-    private Pane display_muscle;
+    private final ChoiceBox<String> chest;
+    private final ListView<String> machine;
+    private final ListView<String> cable;
+    private final ListView<String> freeWeight;
+    private final Pane display_muscle;
 
-    private String imagePath = "./src/main/resources/gym_route/imgs/parts/chest.jpg";
+    private final String imagePath = "./src/main/resources/gym_route/imgs/parts/chest.jpg";
 
-    private ChestEquipments chestEquipments = new ChestEquipments();
-    private BodyPartEquipment chestEquipment = chestEquipments.getChestEquipment();
-    private BodyPartEquipment upperChestEquipment = chestEquipments.getUpperChestEquipment();
-    private BodyPartEquipment lowerChestEquipment = chestEquipments.getLowerChestEquipment();
+    private final ChestEquipments chestEquipments = new ChestEquipments();
+    private final BodyPartEquipment chestEquipment = chestEquipments.getChestEquipment();
+    private final BodyPartEquipment upperChestEquipment = chestEquipments.getUpperChestEquipment();
+    private final BodyPartEquipment lowerChestEquipment = chestEquipments.getLowerChestEquipment();
 
-    private EquipmentHandler equipmentHandler = new EquipmentHandler();
-
-    private CHEST[] chests = { CHEST.CHEST, CHEST.UPPER_CHEST, CHEST.LOWER_CHEST };
+    private final PartEquipmentBinder binder = new PartEquipmentBinder();
+    private final BodyPartEquipment[] equipmentBySubPartOrder = {
+            chestEquipment, upperChestEquipment, lowerChestEquipment
+    };
 
     public ChestHandler(
             ChoiceBox<String> chest, Pane display_muscle,
@@ -36,9 +35,9 @@ public class ChestHandler extends MusclePartHandler {
             ListView<String> freeWeight) {
         this.chest = chest;
         this.display_muscle = display_muscle;
+        this.machine = machine;
         this.cable = cable;
         this.freeWeight = freeWeight;
-        this.machine = machine;
     }
 
     @Override
@@ -47,28 +46,8 @@ public class ChestHandler extends MusclePartHandler {
 
     public void chestHandle() {
         displayArmImage(imagePath, display_muscle);
-
-        equipmentHandler.updateEquipment(
-                chest, CHEST.CHEST, chestEquipment,
+        binder.bindMultiSubPart(
+                chest, CHEST.CHEST, chestEquipment, equipmentBySubPartOrder,
                 machine, cable, freeWeight);
-
-        chest.getSelectionModel().selectedIndexProperty().addListener(new ChangeListener<Number>() {
-            @Override
-            public void changed(
-                    ObservableValue<? extends Number> observableValue,
-                    Number number, Number t1) {
-                if (chests[t1.intValue()] == CHEST.CHEST) {
-                    equipmentHandler.setEquipment(
-                            chestEquipment, machine, cable, freeWeight);
-                } else if (chests[t1.intValue()] == CHEST.UPPER_CHEST) {
-                    equipmentHandler.setEquipment(
-                            upperChestEquipment, machine, cable, freeWeight);
-                } else if (chests[t1.intValue()] == CHEST.LOWER_CHEST) {
-                    equipmentHandler.setEquipment(
-                            lowerChestEquipment, machine, cable, freeWeight);
-                } else {
-                }
-            }
-        });
     }
 }

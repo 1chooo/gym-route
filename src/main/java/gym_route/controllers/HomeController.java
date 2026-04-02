@@ -11,9 +11,7 @@ import javafx.scene.layout.VBox;
 
 import java.io.IOException;
 
-import gym_route.handlers.CableListHandler;
-import gym_route.handlers.FreeWeightListHandler;
-import gym_route.handlers.MachineListHandler;
+import gym_route.handlers.ExerciseGifListHandler;
 import gym_route.handlers.Parts.AerobicHandler;
 import gym_route.handlers.Parts.ArmHandler;
 import gym_route.handlers.Parts.BackHandler;
@@ -64,9 +62,7 @@ public class HomeController {
     private CoreHandler coreHandler;
     private AerobicHandler aerobicHandler;
 
-    private MachineListHandler machineListHandler;
-    private CableListHandler cableListHandler;
-    private FreeWeightListHandler freeWeightListHandler;
+    private ExerciseGifListHandler exerciseGifListHandler;
 
     @FXML
     public void initialize() {
@@ -92,12 +88,8 @@ public class HomeController {
                 aerobic, display_muscle,
                 machine, cable, freeWeight);
 
-        machineListHandler = new MachineListHandler(
-                machine, display_muscle);
-        cableListHandler = new CableListHandler(
-                cable, display_muscle);
-        freeWeightListHandler = new FreeWeightListHandler(
-                freeWeight, display_muscle);
+        exerciseGifListHandler = new ExerciseGifListHandler(
+                machine, cable, freeWeight, display_muscle);
     }
 
     public void handle(MouseEvent event) {
@@ -132,15 +124,15 @@ public class HomeController {
     }
 
     public void clickedMachineList(MouseEvent event) {
-        machineListHandler.handleMachineSelection(event);
+        exerciseGifListHandler.handleMachineSelection(event);
     }
 
     public void clickedCableList(MouseEvent event) {
-        cableListHandler.handleCableSelection(event);
+        exerciseGifListHandler.handleCableSelection(event);
     }
 
     public void clickedFreeWeightList(MouseEvent event) {
-        freeWeightListHandler.handleFreeWeightSelection(event);
+        exerciseGifListHandler.handleFreeWeightSelection(event);
     }
 
     public void clickedPreviousPage() throws IOException {

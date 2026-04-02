@@ -2,8 +2,8 @@ package gym_route.handlers.Parts;
 
 import gym_route.equipments.AerobicEquipments;
 import gym_route.equipments.BodyPartEquipment;
-import gym_route.handlers.EquipmentHandler;
 import gym_route.handlers.MusclePartHandler;
+import gym_route.handlers.PartEquipmentBinder;
 import gym_route.parts.AEROBIC;
 import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.ListView;
@@ -11,23 +11,22 @@ import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.Pane;
 
 public class AerobicHandler extends MusclePartHandler {
-    private ChoiceBox<String> aerobic;
-    private ListView<String> machine;
-    private ListView<String> cable;
-    private ListView<String> freeWeight;
-    private Pane display_muscle;
+    private final ChoiceBox<String> aerobic;
+    private final ListView<String> machine;
+    private final ListView<String> cable;
+    private final ListView<String> freeWeight;
+    private final Pane display_muscle;
 
-    private String imagePath = "./src/main/resources/gym_route/imgs/parts/aero.jfif";
-    
-    private AerobicEquipments aerobicEquipments = new AerobicEquipments();
-    private BodyPartEquipment aerobicEquipment = aerobicEquipments.getAerobicEquipment();
+    private final String imagePath = "./src/main/resources/gym_route/imgs/parts/aero.jfif";
 
-    private EquipmentHandler equipmentHandler = new EquipmentHandler();
+    private final AerobicEquipments aerobicEquipments = new AerobicEquipments();
+    private final BodyPartEquipment aerobicEquipment = aerobicEquipments.getAerobicEquipment();
+
+    private final PartEquipmentBinder binder = new PartEquipmentBinder();
 
     public AerobicHandler(
             ChoiceBox<String> aerobic, Pane display_muscle,
-            ListView<String> machine, ListView<String> cable,
-            ListView<String> freeWeight) {
+            ListView<String> machine, ListView<String> cable, ListView<String> freeWeight) {
         this.aerobic = aerobic;
         this.display_muscle = display_muscle;
         this.machine = machine;
@@ -41,15 +40,7 @@ public class AerobicHandler extends MusclePartHandler {
 
     public void aerobicHandle() {
         displayArmImage(imagePath, display_muscle);
-
-        equipmentHandler.updateEquipment(
-                aerobic, AEROBIC.AEROBIC,
-                aerobicEquipment, machine, cable, freeWeight);
-
-        if (aerobic.getValue().toString().equals(AEROBIC.AEROBIC.getName())) {
-            equipmentHandler.setEquipment(
-                    aerobicEquipment, machine, cable, freeWeight);
-        } else {
-        }
+        binder.bindSingleSubPart(
+                aerobic, AEROBIC.AEROBIC, aerobicEquipment, machine, cable, freeWeight);
     }
 }

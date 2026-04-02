@@ -1,34 +1,33 @@
 package gym_route.handlers.Parts;
 
+import gym_route.equipments.ArmEquipments;
+import gym_route.equipments.BodyPartEquipment;
+import gym_route.handlers.MusclePartHandler;
+import gym_route.handlers.PartEquipmentBinder;
+import gym_route.parts.ARM;
 import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.ListView;
 import javafx.scene.input.MouseEvent;
-import gym_route.equipments.ArmEquipments;
-import gym_route.equipments.BodyPartEquipment;
-import gym_route.handlers.EquipmentHandler;
-import gym_route.handlers.MusclePartHandler;
-import gym_route.parts.ARM;
-import javafx.beans.value.ChangeListener;
-import javafx.beans.value.ObservableValue;
 import javafx.scene.layout.Pane;
 
 public class ArmHandler extends MusclePartHandler {
-    private ChoiceBox<String> arm;
-    private ListView<String> machine;
-    private ListView<String> cable;
-    private ListView<String> freeWeight;
-    private Pane display_muscle;
+    private final ChoiceBox<String> arm;
+    private final ListView<String> machine;
+    private final ListView<String> cable;
+    private final ListView<String> freeWeight;
+    private final Pane display_muscle;
 
-    private String imagePath = "./src/main/resources/gym_route/imgs/parts/arm.jpg";
+    private final String imagePath = "./src/main/resources/gym_route/imgs/parts/arm.jpg";
 
-    private ArmEquipments armEquipments = new ArmEquipments();
-    private BodyPartEquipment armEquipment = armEquipments.getArmEquipment();
-    private BodyPartEquipment bicepsEquipment = armEquipments.getBicepsEquipment();
-    private BodyPartEquipment tricepsEquipment = armEquipments.getTricepsEquipment();
-    
-    private EquipmentHandler equipmentHandler = new EquipmentHandler();
+    private final ArmEquipments armEquipments = new ArmEquipments();
+    private final BodyPartEquipment armEquipment = armEquipments.getArmEquipment();
+    private final BodyPartEquipment bicepsEquipment = armEquipments.getBicepsEquipment();
+    private final BodyPartEquipment tricepsEquipment = armEquipments.getTricepsEquipment();
 
-    private ARM[] arms = { ARM.ARM, ARM.BICEPS, ARM.TRICEPS };
+    private final PartEquipmentBinder binder = new PartEquipmentBinder();
+    private final BodyPartEquipment[] equipmentBySubPartOrder = {
+            armEquipment, bicepsEquipment, tricepsEquipment
+    };
 
     public ArmHandler(
             ChoiceBox<String> arm, Pane display_muscle,
@@ -47,28 +46,8 @@ public class ArmHandler extends MusclePartHandler {
 
     public void armHandle() {
         displayArmImage(imagePath, display_muscle);
-
-        equipmentHandler.updateEquipment(
-                arm, ARM.ARM, armEquipment,
+        binder.bindMultiSubPart(
+                arm, ARM.ARM, armEquipment, equipmentBySubPartOrder,
                 machine, cable, freeWeight);
-
-        arm.getSelectionModel().selectedIndexProperty().addListener(new ChangeListener<Number>() {
-            @Override
-            public void changed(
-                    ObservableValue<? extends Number> observableValue,
-                    Number number, Number t1) {
-                if (arms[t1.intValue()] == ARM.ARM) {
-                    equipmentHandler.setEquipment(
-                            armEquipment, machine, cable, freeWeight);
-                } else if (arms[t1.intValue()] == ARM.BICEPS) {
-                    equipmentHandler.setEquipment(
-                            bicepsEquipment, machine, cable, freeWeight);
-                } else if (arms[t1.intValue()] == ARM.TRICEPS) {
-                    equipmentHandler.setEquipment(
-                            tricepsEquipment, machine, cable, freeWeight);
-                } else {
-                }
-            }
-        });
     }
 }

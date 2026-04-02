@@ -2,8 +2,8 @@ package gym_route.handlers.Parts;
 
 import gym_route.equipments.BodyPartEquipment;
 import gym_route.equipments.CoreEquipments;
-import gym_route.handlers.EquipmentHandler;
 import gym_route.handlers.MusclePartHandler;
+import gym_route.handlers.PartEquipmentBinder;
 import gym_route.parts.CORE;
 import javafx.scene.control.ChoiceBox;
 import javafx.scene.control.ListView;
@@ -11,18 +11,18 @@ import javafx.scene.input.MouseEvent;
 import javafx.scene.layout.Pane;
 
 public class CoreHandler extends MusclePartHandler {
-    private ChoiceBox<String> core;
-    private ListView<String> machine;
-    private ListView<String> cable;
-    private ListView<String> freeWeight;
-    private Pane display_muscle;
+    private final ChoiceBox<String> core;
+    private final ListView<String> machine;
+    private final ListView<String> cable;
+    private final ListView<String> freeWeight;
+    private final Pane display_muscle;
 
-    private String imagePath = "./src/main/resources/gym_route/imgs/parts/core.jpg";
+    private final String imagePath = "./src/main/resources/gym_route/imgs/parts/core.jpg";
 
-    private CoreEquipments coreEquipments = new CoreEquipments();
-    private BodyPartEquipment coreEquipment = coreEquipments.getCoreEquipment();
-    
-    private EquipmentHandler equipmentHandler = new EquipmentHandler();
+    private final CoreEquipments coreEquipments = new CoreEquipments();
+    private final BodyPartEquipment coreEquipment = coreEquipments.getCoreEquipment();
+
+    private final PartEquipmentBinder binder = new PartEquipmentBinder();
 
     public CoreHandler(
             ChoiceBox<String> core, Pane display_muscle,
@@ -40,15 +40,6 @@ public class CoreHandler extends MusclePartHandler {
 
     public void coreHandle() {
         displayArmImage(imagePath, display_muscle);
-
-        equipmentHandler.updateEquipment(
-                core, CORE.CORE,
-                coreEquipment, machine, cable, freeWeight);
-
-        if (core.getValue().toString().equals(CORE.CORE.getName())) {
-            equipmentHandler.setEquipment(
-                    coreEquipment, machine, cable, freeWeight);
-        } else {
-        }
+        binder.bindSingleSubPart(core, CORE.CORE, coreEquipment, machine, cable, freeWeight);
     }
 }
