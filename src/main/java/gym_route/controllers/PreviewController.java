@@ -1,25 +1,26 @@
 package gym_route.controllers;
 
 import javafx.fxml.FXML;
+import javafx.scene.Node;
 import javafx.scene.control.Button;
 import javafx.scene.control.Label;
+import javafx.scene.layout.GridPane;
 
 import java.io.IOException;
+import java.util.Objects;
 
 public class PreviewController {
+
+    private static final int PREVIEW_DATA_ROWS = 8;
+    private static final int PREVIEW_DATA_COLS = 7;
+
+    @FXML
+    private GridPane previewGrid;
+
     @FXML
     Button backCurriculum;
     @FXML
     Button viewCalender;
-    @FXML
-    Label c00, c01, c02, c03, c04, c05, c06,
-            c10, c11, c12, c13, c14, c15, c16,
-            c20, c21, c22, c23, c24, c25, c26,
-            c30, c31, c32, c33, c34, c35, c36,
-            c40, c41, c42, c43, c44, c45, c46,
-            c50, c51, c52, c53, c54, c55, c56,
-            c60, c61, c62, c63, c64, c65, c66,
-            c70, c71, c72, c73, c74, c75, c76;
 
     static Label[][] curriculumLabelMatrix;
 
@@ -38,22 +39,35 @@ public class PreviewController {
     public static void displayScreenArrayToPreview() throws IOException {
         for (int row = 0; row <= 7; row++) {
             for (int column = 0; column <= 6; column++) {
-                curriculumLabelMatrix[row][column].setText(CurriculumController.curriculumForWeek[row][column]);
+                String value = CurriculumController.curriculumForWeek[row][column];
+                curriculumLabelMatrix[row][column].setText(Objects.toString(value, ""));
             }
         }
     }
 
     @FXML
-    public void initialize() throws IOException {
-        curriculumLabelMatrix = new Label[][] {
-                { c00, c01, c02, c03, c04, c05, c06 },
-                { c10, c11, c12, c13, c14, c15, c16 },
-                { c20, c21, c22, c23, c24, c25, c26 },
-                { c30, c31, c32, c33, c34, c35, c36 },
-                { c40, c41, c42, c43, c44, c45, c46 },
-                { c50, c51, c52, c53, c54, c55, c56 },
-                { c60, c61, c62, c63, c64, c65, c66 },
-                { c70, c71, c72, c73, c74, c75, c76 } };
+    public void initialize() {
+        wirePreviewMatrix();
+    }
+
+    private void wirePreviewMatrix() {
+        curriculumLabelMatrix = new Label[PREVIEW_DATA_ROWS][PREVIEW_DATA_COLS];
+        for (Node node : previewGrid.getChildren()) {
+            if (!(node instanceof Label)) {
+                continue;
+            }
+            int row = GridPane.getRowIndex(node) != null ? GridPane.getRowIndex(node) : 0;
+            int col = GridPane.getColumnIndex(node) != null ? GridPane.getColumnIndex(node) : 0;
+            if (row < 1 || col < 1) {
+                continue;
+            }
+            int dataRow = row - 1;
+            int dataCol = col - 1;
+            if (dataRow >= PREVIEW_DATA_ROWS || dataCol >= PREVIEW_DATA_COLS) {
+                continue;
+            }
+            curriculumLabelMatrix[dataRow][dataCol] = (Label) node;
+        }
     }
 
 }

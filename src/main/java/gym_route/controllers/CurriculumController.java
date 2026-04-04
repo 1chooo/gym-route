@@ -3,9 +3,9 @@ package gym_route.controllers;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Collections;
-import java.util.Dictionary;
-import java.util.Hashtable;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 import gym_route.equipments.AerobicEquipments;
 import gym_route.equipments.ArmEquipments;
@@ -27,6 +27,20 @@ import javafx.scene.control.TextField;
 import javafx.scene.layout.VBox;
 
 public class CurriculumController {
+
+    /** Display order matches {@link #curriculumForWeek} column index (0 = Sunday). */
+    public static final List<String> WEEKDAY_NAMES = List.of(
+            "星期日", "星期一", "星期二", "星期三", "星期四", "星期五", "星期六");
+
+    private static final Map<String, Integer> WEEKDAY_TO_COLUMN;
+
+    static {
+        Map<String, Integer> columnByWeekday = new HashMap<>();
+        for (int i = 0; i < WEEKDAY_NAMES.size(); i++) {
+            columnByWeekday.put(WEEKDAY_NAMES.get(i), i);
+        }
+        WEEKDAY_TO_COLUMN = Map.copyOf(columnByWeekday);
+    }
 
     /**
      * Legacy bug: “股二頭” populated the free-weight section from the arm biceps list (preserved).
@@ -96,24 +110,14 @@ public class CurriculumController {
     private final CoreEquipments coreEquipments = new CoreEquipments();
     private final AerobicEquipments aerobicEquipments = new AerobicEquipments();
 
-    private final ArrayList<String> weekdayArray = new ArrayList<>();
     private final ArrayList<String> orderArray = new ArrayList<>();
 
     public void setBackButton() throws IOException {
         SceneController.switchScene(PAGE.HOME);
     }
 
-    public void addWeekdayArray() {
-        String[] action = {
-                "星期日", "星期一",
-                "星期二", "星期三",
-                "星期四", "星期五", "星期六"
-        };
-        Collections.addAll(weekdayArray, action);
-    }
-
     public void setWeekday() {
-        weekday.getItems().addAll(weekdayArray);
+        weekday.getItems().addAll(WEEKDAY_NAMES);
     }
 
     public void addOrderArray() {
@@ -255,7 +259,7 @@ public class CurriculumController {
         sets.clear();
         times.clear();
         order.setValue("1");
-        weekday.setValue("星期日");
+        weekday.setValue(WEEKDAY_NAMES.get(0));
     }
 
     static ArrayList<ArrayList<String>> screenArrayList = new ArrayList<>();
@@ -287,7 +291,7 @@ public class CurriculumController {
             if (screen_index == -1) {
                 status.setText("請選取清單欲刪除資料");
             } else {
-                int column = dict.get(screenArrayList.get(screen_index).get(0));
+                int column = WEEKDAY_TO_COLUMN.get(screenArrayList.get(screen_index).get(0));
                 int row = Integer.parseInt(screenArrayList.get(screen_index).get(1)) - 1;
 
                 screenArrayList.remove(screen_index);
@@ -306,11 +310,10 @@ public class CurriculumController {
     }
 
     static String[][] curriculumForWeek = new String[8][7];
-    Dictionary<String, Integer> dict = new Hashtable<>();
 
     public void loadScreenArray() throws IOException {
         for (ArrayList<String> temp : screenArrayList) {
-            int column = dict.get(temp.get(0));
+            int column = WEEKDAY_TO_COLUMN.get(temp.get(0));
             int row = Integer.parseInt(temp.get(1)) - 1;
             curriculumForWeek[row][column] = temp.get(2);
         }
@@ -324,14 +327,6 @@ public class CurriculumController {
 
     @FXML
     private void initialize() throws IOException {
-        dict.put("星期日", 0);
-        dict.put("星期一", 1);
-        dict.put("星期二", 2);
-        dict.put("星期三", 3);
-        dict.put("星期四", 4);
-        dict.put("星期五", 5);
-        dict.put("星期六", 6);
-        addWeekdayArray();
         addOrderArray();
         setWeekday();
         setOrder();
