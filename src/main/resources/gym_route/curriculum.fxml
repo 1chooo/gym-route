@@ -137,9 +137,9 @@
                     onMouseClicked="#clickedClear" prefHeight="50.0" prefWidth="200.0"
                     style="-fx-background-color: #F4A460;" text="清空" textAlignment="CENTER" />
                 <TextField fx:id="times" layoutX="725.0" layoutY="116.0" prefHeight="75.0"
-                    prefWidth="150.0" style="-fx-background-color: #FFFAF0;" />
+                    prefWidth="150.0" style="-fx-background-color: #FFFAF0;" text="12" />
                 <TextField fx:id="sets" layoutX="450.0" layoutY="116.0" prefHeight="75.0"
-                    prefWidth="150.0" style="-fx-background-color: #FFFAF0;" />
+                    prefWidth="150.0" style="-fx-background-color: #FFFAF0;" text="3" />
                 <Button fx:id="deleteList" layoutX="925.0" layoutY="300.0" mnemonicParsing="false"
                     onMouseClicked="#clickedClearRow" prefHeight="75.0" prefWidth="200.0"
                     style="-fx-background-color: #F4A460;" text="刪除整列" />
